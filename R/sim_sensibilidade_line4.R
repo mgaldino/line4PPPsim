@@ -41,7 +41,7 @@ sim_sensibilidade_line4 <- function (n_sim, num_years,t_0 = 2.14, ipc_0 = 1.1,
   previsto  <- gen_forecast_revenue(num_years = 33, ajuste_inflacao = F)
 
   # criando matriz para guardar resultados
-  # cada linha ? uma simula??o
+  # cada linha e uma simulacao
   realizado  <- matrix(0, nrow=n_sim, ncol=33)
   dif <- matrix(0, nrow=n_sim, ncol=33)
 
