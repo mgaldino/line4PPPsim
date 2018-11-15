@@ -41,14 +41,14 @@ sim_sensibilidade_line4 <- function (n_sim, num_years,t_0 = 2.14, ipc_0 = 1.1,
   previsto  <- gen_forecast_revenue(num_years = 33, ajuste_inflacao = F)
 
   # criando matriz para guardar resultados
-  # cada linha é uma simulação
+  # cada linha ? uma simula??o
   realizado  <- matrix(0, nrow=n_sim, ncol=33)
   dif <- matrix(0, nrow=n_sim, ncol=33)
 
   # sensibilidade, random walk, constant or white noise
 
   param <- matrix(0, nrow=n_sim, ncol=33)
-  # rodando simulação
+  # rodando simulacao
 
   for ( i in 1:n_sim) {
     param[i,] <- gen_sensibilidade(start_seed, num_years, mu, sd, type)
