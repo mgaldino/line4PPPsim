@@ -10,7 +10,10 @@ License: GPL-2
 Encoding: UTF-8
 LazyData: true
 Imports: 
-  tidyverse
+  dplyr,
+  tidyr
 Suggests:
-  knitr
+  knitr,
+  devtools,
+  ggplot2
 RoxygenNote: 6.1.0
