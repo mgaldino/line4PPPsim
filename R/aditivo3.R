@@ -1,4 +1,4 @@
-#' @title Multa por Atraso Aditivo3
+#' @title Multa por Atraso do Aditivo 3
 #'
 #' @description Computes the fine due to delay in construction, as per in "aditivo 3"
 #'
