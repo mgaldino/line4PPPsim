@@ -1,4 +1,4 @@
-#' @title Simulates fiscal impact of line 4 subway PPP
+#' @title Gera tarifa implicita da linha 4
 #'
 #' @description This package allows the user to run Monte Carlo simulation to assess the fiscal impact of lline 4 PPP in São Paulo.
 #'
