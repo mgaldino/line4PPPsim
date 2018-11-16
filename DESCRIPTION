@@ -9,9 +9,9 @@ License: GPL-2
 Encoding: UTF-8
 LazyData: true
 Imports: 
+  stats,
   dplyr,
-  tidyr,
-  stats
+  tidyr
 Suggests:
   knitr,
   devtools,
