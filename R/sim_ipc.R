@@ -2,7 +2,7 @@
 #'
 #' @description This package allows the user to run Monte Carlo simulation to assess the fiscal impact of lline 4 PPP in São Paulo.
 #'
-#'@import stats
+#'@importFrom stats rnorm rt
 #'
 #' @param ipc_0 A number
 #' @param ipc_realizado A vector
