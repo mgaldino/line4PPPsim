@@ -7,7 +7,7 @@
 #'
 #' @return A vector of inflation for 33 years
 #'
-#' @examples  sim_ipc(ipc_realizado = NA)
+#' @examples  sim_ipc(ipc_0 = 1.1, ipc_realizado = NA)
 #'
 #' @export sim_ipc
 

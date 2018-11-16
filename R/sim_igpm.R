@@ -2,12 +2,12 @@
 #'
 #' @description This package allows the user to run Monte Carlo simulation to assess the fiscal impact of lline 4 PPP in São Paulo.
 #'
-#' @param ipc_0 A number
-#' @param ipc_realizado A vector
+#' @param igpm_0 A number
+#' @param igpm_realizado A vector or NA
 #'
 #' @return A vector of inflation for 33 years
 #'
-#' @examples  sim_igpm(ipc_igpm = NA)
+#' @examples  sim_igpm(igpm_0= 1.1, igpm_realizado = NA)
 #'
 #' @export sim_igpm
 
