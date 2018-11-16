@@ -36,8 +36,6 @@ gen_implicit_ticket_revenue(numPassengersExclusive,
 \item{sensibilidade}{A vector}
 
 \item{ajuste_inflacao}{logical}
-
-\item{num_years}{A number}
 }
 \value{
 a vector of demand adjustement of size equal to num_years - input to compute implicit rate

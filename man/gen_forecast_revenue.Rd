@@ -6,7 +6,8 @@
 \usage{
 gen_forecast_revenue(num_years = 30, t_0 = 2.14, ipc_0 = 1.1,
   ipgm_0 = 1.1, a = 0.5, b = 0.5, ipc_realizado = NA,
-  igpm_realizado = NA, qualityAdjustment = 1, ajuste_inflacao)
+  igpm_realizado = NA, qualityAdjustment = 1, ajuste_inflacao,
+  sensibilidade = 1.3)
 }
 \arguments{
 \item{num_years}{A number}
@@ -29,11 +30,7 @@ gen_forecast_revenue(num_years = 30, t_0 = 2.14, ipc_0 = 1.1,
 
 \item{ajuste_inflacao}{logical}
 
-\item{num_years}{A number}
-
-\item{sensibilidade}{A vector]}
-
-\item{qualityAdjustment}{A number}
+\item{sensibilidade}{A vector}
 }
 \value{
 a vector of revenue of size equal to num_years - as a result of forecasted demand in contract
