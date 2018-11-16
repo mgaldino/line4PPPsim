@@ -2,11 +2,9 @@
 #'
 #' @description This package allows the user to run Monte Carlo simulation to assess the fiscal impact of lline 4 PPP in SÃ£o Paulo.
 #'
-#'@import tidyr
-#'@import dplyr
-#'
 #' @param num_sim A number
 #' @param qualityAdjustment A number
+#' @param num_years A number
 #' @param num_years A number
 #' @param t_0 A number
 #' @param ipc_0 A number
@@ -16,6 +14,7 @@
 #' @param ipc_realizado A number
 #' @param igpm_realizado A number
 #' @param sensibilidade A vector]
+#' @param qualityAdjustment A number
 #' @param ajuste_inflacao logical
 #' @param mu A number
 #' @param sd A number
@@ -36,18 +35,20 @@ sim_sensibilidade_line4 <- function (n_sim, num_years,t_0 = 2.14, ipc_0 = 1.1,
                                      qualityAdjustment=1, ajuste_inflacao,
                                      mu =1, sd = .1,
                                      type = "white_noise", start_seed){
+  stopifnot(require(dplyr))
+  stopifnot(require(tidyr))
 
   previsto  <- gen_forecast_revenue(num_years = 33, ajuste_inflacao = F)
 
   # criando matriz para guardar resultados
-  # cada linha e uma simulacao
+  # cada linha é uma simulação
   realizado  <- matrix(0, nrow=n_sim, ncol=33)
   dif <- matrix(0, nrow=n_sim, ncol=33)
 
   # sensibilidade, random walk, constant or white noise
 
   param <- matrix(0, nrow=n_sim, ncol=33)
-  # rodando simulacao
+  # rodando simulação
 
   for ( i in 1:n_sim) {
     param[i,] <- gen_sensibilidade(start_seed, num_years, mu, sd, type)
