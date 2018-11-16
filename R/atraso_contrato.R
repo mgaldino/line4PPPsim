@@ -18,7 +18,7 @@ atraso_contrato <- function(num_meses_atraso_contrato = 18) {
     multa2 <- 2335000*num_meses_atraso_contrato
 
 
-    atraso2 <- ifelse(num_meses_atraso > 12, 12,num_meses_atraso)
+    atraso2 <- ifelse(num_meses_atraso_contrato > 12, 12,num_meses_atraso_contrato)
     multa3 <- 1167500*atraso2
 
     total_final <- multa1 + multa2 + multa3
