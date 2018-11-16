@@ -4,6 +4,7 @@
 #'
 #'@import tidyr
 #'@import dplyr
+#'@import stats
 #'
 #' @param num_sim A number
 #' @param qualityAdjustment A number
