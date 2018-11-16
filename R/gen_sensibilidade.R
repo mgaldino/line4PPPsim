@@ -15,7 +15,7 @@
 #' @export gen_sensibilidade
 
 gen_sensibilidade <- function(start_seed, num_years = 33,
-                              mu = 0, sd = .05, type) {
+                              mu = 0, sd = .05, type = "random_walk") {
 
   switch(type,
          random_walk = random_walk(start_seed, num_years,
