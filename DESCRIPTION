@@ -1,6 +1,6 @@
 Package: SimLine4PPP
 Type: Package
-Title: Simulates Fiscal Impact of Subway PPP in Brazil. 
+Title: Simulates Fiscal Impact of Subway PPP in Brazil 
 Version: 0.1.1
 Author: Manoel Galdino
 Maintainer: Manoel Galdino <mcz.fea@gmail.com>
