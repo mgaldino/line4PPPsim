@@ -2,6 +2,9 @@
 #'
 #' @description This package allows the user to run Monte Carlo simulation to assess the fiscal impact of lline 4 PPP in São Paulo.
 #'
+#'@import tidyr
+#'@import dplyr
+#'
 #' @param num_sim A number
 #' @param qualityAdjustment A number
 #' @param num_years A number
@@ -35,8 +38,6 @@ sim_sensibilidade_line4 <- function (n_sim, num_years,t_0 = 2.14, ipc_0 = 1.1,
                                      qualityAdjustment=1, ajuste_inflacao,
                                      mu =1, sd = .1,
                                      type = "white_noise", start_seed){
-  stopifnot(require(dplyr))
-  stopifnot(require(tidyr))
 
   previsto  <- gen_forecast_revenue(num_years = 33, ajuste_inflacao = F)
 
