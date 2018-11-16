@@ -5,7 +5,7 @@
 #' @param num_meses_atraso a number - number of months that phase 2 is delayed (asinoriginal contract)
 #' @param vec_meses_atrasados A vector with numbers - number of delay (in months) for each tranche. There are three tranches.
 #'
-#' @return total payment for the informed number of months delayed
+#' @return total payment for the informed number of months delayed and delay per tranche
 #'
 #' @examples  aditivo4(num_meses_atraso = 10,
 #' vec_meses_atrasados= c(10, 14, NA))
