@@ -7,9 +7,9 @@
 sim_igpm(igpm_0 = 1.1, igpm_realizado)
 }
 \arguments{
-\item{ipc_0}{A number}
+\item{igpm_0}{A number}
 
-\item{ipc_realizado}{A vector}
+\item{igpm_realizado}{A vector or NA}
 }
 \value{
 A vector of inflation for 33 years
@@ -18,6 +18,6 @@ A vector of inflation for 33 years
 This package allows the user to run Monte Carlo simulation to assess the fiscal impact of lline 4 PPP in São Paulo.
 }
 \examples{
- sim_igpm(ipc_igpm = NA)
+ sim_igpm(igpm_0= 1.1, igpm_realizado = NA)
 
 }

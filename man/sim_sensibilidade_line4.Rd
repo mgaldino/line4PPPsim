@@ -10,6 +10,8 @@ sim_sensibilidade_line4(n_sim, num_years, t_0 = 2.14, ipc_0 = 1.1,
   mu = 1, sd = 0.1, type = "white_noise", start_seed)
 }
 \arguments{
+\item{n_sim}{A number}
+
 \item{num_years}{A number}
 
 \item{t_0}{A number}
@@ -38,13 +40,7 @@ sim_sensibilidade_line4(n_sim, num_years, t_0 = 2.14, ipc_0 = 1.1,
 
 \item{start_seed}{A number}
 
-\item{num_sim}{A number}
-
-\item{num_years}{A number}
-
 \item{sensibilidade}{A vector]}
-
-\item{qualityAdjustment}{A number}
 }
 \value{
 a list with two elements: a data.frame wih simulated difference betwen real demand and forecasted, and a matrizwith sensibilidade parameters generated in the simulation.

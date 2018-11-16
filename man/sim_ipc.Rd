@@ -18,6 +18,6 @@ A vector of inflation for 33 years
 This package allows the user to run Monte Carlo simulation to assess the fiscal impact of lline 4 PPP in São Paulo.
 }
 \examples{
- sim_ipc(ipc_realizado = NA)
+ sim_ipc(ipc_0 = 1.1, ipc_realizado = NA)
 
 }

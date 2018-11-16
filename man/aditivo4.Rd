@@ -12,13 +12,13 @@ aditivo4(num_meses_atraso, vec_meses_atrasados)
 \item{vec_meses_atrasados}{A vector with numbers - number of delay (in months) for each tranche. There are three tranches.}
 }
 \value{
-total payment for the informed number of months delayed
+total payment for the informed number of months delayed and delay per tranche
 }
 \description{
 Computes the fine due to delay in construction, as per in "aditivo 4"
 }
 \examples{
- aditivo3(num_meses_atraso = 12,
+ aditivo4(num_meses_atraso = 10,
 vec_meses_atrasados= c(10, 14, NA))
 
 }
