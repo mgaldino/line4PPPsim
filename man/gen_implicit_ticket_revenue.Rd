@@ -2,7 +2,7 @@
 % Please edit documentation in R/gen_implicit_ticket_revenue.R
 \name{gen_implicit_ticket_revenue}
 \alias{gen_implicit_ticket_revenue}
-\title{Simulates fiscal impact of line 4 subway PPP}
+\title{Gera tarifa implicita da linha 4}
 \usage{
 gen_implicit_ticket_revenue(numPassengersExclusive,
   numPassengersIntegrated, price_ticket, num_years, t_0 = 2.14,

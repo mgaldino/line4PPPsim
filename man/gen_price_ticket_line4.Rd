@@ -2,7 +2,7 @@
 % Please edit documentation in R/gen_price_ticket_line4.R
 \name{gen_price_ticket_line4}
 \alias{gen_price_ticket_line4}
-\title{Simulates fiscal impact of line 4 subway PPP}
+\title{Gera tarifa da linha 4}
 \usage{
 gen_price_ticket_line4(num_years, t_0 = 2.14, ipc_0 = 1.1,
   ipgm_0 = 1.1, a = 0.5, b = 0.5, ipc_realizado = NA,
