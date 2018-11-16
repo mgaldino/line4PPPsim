@@ -4,7 +4,6 @@
 #'
 #' @param qualityAdjustment A number
 #' @param num_years A number
-#' @param num_years A number
 #' @param t_0 A number
 #' @param ipc_0 A number
 #' @param ipgm_0 A number

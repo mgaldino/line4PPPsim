@@ -4,11 +4,9 @@
 #'
 #'@import tidyr
 #'@import dplyr
-#'@import stats
 #'
 #' @param num_sim A number
 #' @param qualityAdjustment A number
-#' @param num_years A number
 #' @param num_years A number
 #' @param t_0 A number
 #' @param ipc_0 A number
@@ -18,7 +16,6 @@
 #' @param ipc_realizado A number
 #' @param igpm_realizado A number
 #' @param sensibilidade A vector]
-#' @param qualityAdjustment A number
 #' @param ajuste_inflacao logical
 #' @param mu A number
 #' @param sd A number

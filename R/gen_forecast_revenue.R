@@ -4,7 +4,6 @@
 #'
 #' @param qualityAdjustment A number
 #' @param num_years A number
-#' @param num_years A number
 #' @param t_0 A number
 #' @param ipc_0 A number
 #' @param ipgm_0 A number
@@ -12,8 +11,7 @@
 #' @param b A number
 #' @param ipc_realizado A number
 #' @param igpm_realizado A number
-#' @param sensibilidade A vector]
-#' @param qualityAdjustment A number
+#' @param sensibilidade A vector
 #' @param ajuste_inflacao logical
 #'
 #' @return a vector of revenue of size equal to num_years - as a result of forecasted demand in contract
@@ -24,7 +22,7 @@
 
 gen_forecast_revenue <- function(num_years = 30, t_0 = 2.14, ipc_0 = 1.1,
                                  ipgm_0 = 1.1, a=.5, b=.5, ipc_realizado=NA, igpm_realizado=NA,
-                                 qualityAdjustment=1, ajuste_inflacao) {
+                                 qualityAdjustment=1, ajuste_inflacao, sensibilidade = 1.3) {
 
   num_pass <- gen_num_passengers(sensibilidade = 1)
 
