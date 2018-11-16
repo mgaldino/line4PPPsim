@@ -7,10 +7,10 @@
 #'
 #' @return total payment for the informed number of months delayed
 #'
-#' @examples  aditivo3(num_meses_atraso = 12,
+#' @examples  aditivo4(num_meses_atraso = 10,
 #' vec_meses_atrasados= c(10, 14, NA))
 #'
-#' @export aditivo3
+#' @export aditivo4
 
 
 aditivo4 <- function(num_meses_atraso, vec_meses_atrasados) {
