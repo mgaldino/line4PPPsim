@@ -18,6 +18,6 @@ a vector of a constant times series of size equal to num_years
 This package allows the user to run Monte Carlo simulation to assess the fiscal impact of lline 4 PPP in São Paulo.
 }
 \examples{
- constant(start_seed = 1.3, mu = 0, sd = .05)
+ constant(start_seed = 1.3)
 
 }

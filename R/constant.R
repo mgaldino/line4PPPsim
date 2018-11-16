@@ -7,7 +7,7 @@
 #'
 #' @return a vector of a constant times series of size equal to num_years
 #'
-#' @examples  constant(start_seed = 1.3, mu = 0, sd = .05)
+#' @examples  constant(start_seed = 1.3)
 #'
 #' @export constant
 
