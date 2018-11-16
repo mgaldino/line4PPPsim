@@ -31,8 +31,6 @@ gen_ticket_revenue(num_years = 30, t_0 = 2.14, ipc_0 = 1.1,
 \item{sensibilidade}{A vector}
 
 \item{ajuste_inflacao}{logical}
-
-\item{num_years}{A number}
 }
 \value{
 a vector of revenue of size equal to num_years - as a result of real demand as set by sensibilidade
