@@ -16,13 +16,13 @@
 #'
 #' @return a vector of revenue of size equal to num_years - as a result of forecasted demand in contract
 #'
-#' @examples  gen_forecast_revenue(sensibilidade = 1.3, ajuste_inflacao = F)
+#' @examples  gen_forecast_revenue(sensibilidade = 1.3, ajuste_inflacao = FALSE)
 #'
 #' @export gen_forecast_revenue
 
 gen_forecast_revenue <- function(num_years = 30, t_0 = 2.14, ipc_0 = 1.1,
                                  ipgm_0 = 1.1, a=.5, b=.5, ipc_realizado=NA, igpm_realizado=NA,
-                                 qualityAdjustment=1, ajuste_inflacao, sensibilidade = 1.3) {
+                                 qualityAdjustment=1, ajuste_inflacao = FALSE, sensibilidade = 1.3) {
 
   num_pass <- gen_num_passengers(sensibilidade = 1)
 

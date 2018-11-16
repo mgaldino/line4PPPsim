@@ -15,7 +15,6 @@
 #' @param b A number
 #' @param ipc_realizado A number
 #' @param igpm_realizado A number
-#' @param sensibilidade A vector]
 #' @param ajuste_inflacao logical
 #' @param mu A number
 #' @param sd A number

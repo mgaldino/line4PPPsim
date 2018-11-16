@@ -6,8 +6,8 @@
 \usage{
 gen_forecast_revenue(num_years = 30, t_0 = 2.14, ipc_0 = 1.1,
   ipgm_0 = 1.1, a = 0.5, b = 0.5, ipc_realizado = NA,
-  igpm_realizado = NA, qualityAdjustment = 1, ajuste_inflacao,
-  sensibilidade = 1.3)
+  igpm_realizado = NA, qualityAdjustment = 1,
+  ajuste_inflacao = FALSE, sensibilidade = 1.3)
 }
 \arguments{
 \item{num_years}{A number}
@@ -39,6 +39,6 @@ a vector of revenue of size equal to num_years - as a result of forecasted deman
 This package allows the user to run Monte Carlo simulation to assess the fiscal impact of lline 4 PPP in São Paulo.
 }
 \examples{
- gen_forecast_revenue(sensibilidade = 1.3, ajuste_inflacao = F)
+ gen_forecast_revenue(sensibilidade = 1.3, ajuste_inflacao = FALSE)
 
 }

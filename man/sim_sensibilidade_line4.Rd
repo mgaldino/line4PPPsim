@@ -39,8 +39,6 @@ sim_sensibilidade_line4(n_sim, num_years, t_0 = 2.14, ipc_0 = 1.1,
 \item{type}{character. Either "white_noise", or "random_walk" or "constant"}
 
 \item{start_seed}{A number}
-
-\item{sensibilidade}{A vector]}
 }
 \value{
 a list with two elements: a data.frame wih simulated difference betwen real demand and forecasted, and a matrizwith sensibilidade parameters generated in the simulation.
