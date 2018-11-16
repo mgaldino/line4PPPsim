@@ -5,7 +5,7 @@
 \title{Simulates a vector of sensibilidade parameter}
 \usage{
 gen_sensibilidade(start_seed, num_years = 33, mu = 0, sd = 0.05,
-  type)
+  type = "random_walk")
 }
 \arguments{
 \item{start_seed}{A number}
