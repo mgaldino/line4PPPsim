@@ -4,12 +4,10 @@
 \alias{aditivo3}
 \title{Multa por Atraso do Aditivo 3}
 \usage{
-aditivo3(num_meses_atraso, vec_meses_atrasados)
+aditivo3(vec_meses_atrasados_aditivo3)
 }
 \arguments{
-\item{num_meses_atraso}{a number - number of months that phase 2 is delayed (asinoriginal contract)}
-
-\item{vec_meses_atrasados}{A vector with numbers - number of delay (in months) for each tranche. There are three tranches.}
+\item{vec_meses_atrasados_aditivo3}{A vector with numbers - number of delay (in months) for each tranche. There are three tranches.}
 }
 \value{
 total payment for the informed number of months delayed
@@ -18,7 +16,6 @@ total payment for the informed number of months delayed
 Computes the fine due to delay in construction, as per in "aditivo 3"
 }
 \examples{
- aditivo3(num_meses_atraso = 12,
-vec_meses_atrasados= c(10, 14, NA))
+ aditivo3(vec_meses_atrasados_aditivo3= c(10, 14, NA))
 
 }
