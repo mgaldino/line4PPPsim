@@ -7,7 +7,7 @@
 #'
 #' @return total payment for the informed number of months delayed
 #'
-#' @examples  atraso_contrato_phase1(12, 12)
+#' @examples  atraso_contrato_phase2(12, 12)
 #'
 #' @export atraso_contrato_phase2
 
