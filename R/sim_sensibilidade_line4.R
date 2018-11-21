@@ -36,6 +36,11 @@ sim_sensibilidade_line4 <- function (n_sim, num_years,t_0 = 2.14, ipc_0 = 1.1,
                                      mu =1, sd = .1,
                                      type = "white_noise", start_seed){
 
+  switch(type,
+         white_noise = white_noise(start_seed, mu, sd),
+         random_walk = random_walk(start_seed, mu, sd),
+         constant = constant(start_seed, num_years))
+
   previsto  <- gen_forecast_revenue(num_years = 33, ajuste_inflacao = F)
 
   # criando matriz para guardar resultados
