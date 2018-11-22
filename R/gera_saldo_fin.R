@@ -4,6 +4,7 @@
 #'
 #' @param amortizacao A vector with amortizations data
 #' @param emprestimo A vector with value of loan for each period
+#' @param num_round number to round. If NA, no rounding is done.
 #'
 #' @return balance of long term loan after amortization
 #'
