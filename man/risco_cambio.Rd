@@ -4,13 +4,16 @@
 \alias{risco_cambio}
 \title{Risco cambial}
 \usage{
-risco_cambio(sens_tx_c, tx_c_base = 3.77, exp_camb = 0.5,
-  exp_usd = 1)
+risco_cambio(sens_tx_c, tx_c_base = 3.77, cambio_real = F,
+  exp_camb = 0.5, exp_usd = 1)
 }
 \arguments{
 \item{sens_tx_c}{A number, either 1 or 2 (for type of long term loan)}
 
 \item{tx_c_base}{base exchange rate}
+
+\item{cambio_real}{Logical. If TRUE, will use real exchange rate up to 2017, then 3.77 as prediction for the following years.
+If not, will use tx_c_base and replicate.}
 
 \item{exp_camb}{percent of expostion to foreign currency}
 
