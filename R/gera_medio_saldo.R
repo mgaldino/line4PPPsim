@@ -6,8 +6,8 @@
 #'
 #' @return mean of balances
 #'
-#' @examples  meu_saldo <- gera_saldo_ponte(c(0, 100, 0), c(100, 100, 100))
-#' gera_saldo_ponte(meu_saldo)
+#' @examples  gera_saldo_ponte(c(0, 100, 0))
+#'
 #'
 #' @export gera_media_saldo
 
