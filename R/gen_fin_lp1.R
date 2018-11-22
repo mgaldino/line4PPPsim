@@ -1,12 +1,12 @@
-#' @title Interest paid in emprestimo ponte
+#' @title Financiamento de longo prazo 1
 #'
-#' @description computes interest paid for emprestimo ponte
+#' @description Funcao auxiliar que gera vetor de financiamento de longo prazo, para computar juros
 #'
-#' @return a vector with interest paid for 'long tearm loan'emprestimo ponte' per period
+#' @return a vector financiamento de longo prazo
 #'
-#' @examples  gen_interest_ep()
+#' @examples  gen_fin_lp1()
 #'
-#' @export gen_interest_ep
+#' @export gen_fin_lp1
 
 gen_fin_lp1 <- function() {
   valor_fin_lp1 <- 365613
