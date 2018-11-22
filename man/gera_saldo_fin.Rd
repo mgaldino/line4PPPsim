@@ -10,6 +10,8 @@ gera_saldo_fin(amortizacao, emprestimo, num_round = NA)
 \item{amortizacao}{A vector with amortizations data}
 
 \item{emprestimo}{A vector with value of loan for each period}
+
+\item{num_round}{number to round. If NA, no rounding is done.}
 }
 \value{
 balance of long term loan after amortization

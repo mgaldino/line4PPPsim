@@ -16,7 +16,7 @@ mean of balances
 Auxuliar function
 }
 \examples{
- meu_saldo <- gera_saldo_ponte(c(0, 100, 0), c(100, 100, 100))
-gera_saldo_ponte(meu_saldo)
+ gera_media_saldo(c(0, 100, 0))
+
 
 }

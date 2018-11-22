@@ -6,7 +6,7 @@
 #'
 #' @return mean of balances
 #'
-#' @examples  gera_saldo_ponte(c(0, 100, 0))
+#' @examples  gera_media_saldo(c(0, 100, 0))
 #'
 #'
 #' @export gera_media_saldo
