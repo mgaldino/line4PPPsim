@@ -1,7 +1,7 @@
 Package: line4PPPsim
 Type: Package
 Title: Simulates Fiscal Impact of Subway PPP in Brazil 
-Version: 0.1.1
+Version: 0.1.2
 Author: Manoel Galdino
 Maintainer: Manoel Galdino <mcz.fea@gmail.com>
 Description: This package allows the user to run Monte Carlo simulation on the fiscal impact of subway PPP. This version is focused only on line4 yellow. Future versions will include Rio de Janeiro's VLT.
