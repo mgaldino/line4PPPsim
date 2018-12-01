@@ -6,14 +6,17 @@ Author: Manoel Galdino
 Maintainer: Manoel Galdino <mcz.fea@gmail.com>
 Description: This package allows the user to run Monte Carlo simulation on the fiscal impact of subway PPP. This version is focused only on line4 yellow. Future versions will include Rio de Janeiro's VLT.
 License: GPL-2
+Depends: R (>= 3.0.0)
 Encoding: UTF-8
 LazyData: true
 Imports: 
   stats,
   dplyr,
-  tidyr
+  tidyr,
+  ggplot2
 Suggests:
   knitr,
   devtools,
   ggplot2
+URL: https://github.com/mgaldino/line4PPPsim
 RoxygenNote: 6.1.1
