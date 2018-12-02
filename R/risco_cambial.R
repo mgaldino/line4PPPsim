@@ -1,13 +1,18 @@
 #' @title Risco cambial
 #'
-#' @description computes totl spending for a given sensitibilit in exhange rate
+#' @description computes total spending for a given sensibility in exhange rate
 #'
-#' @param sens_tx_c A number, either 1 or 2 (for type of long term loan)
+#' @param sens_tx_c A number. How much above or below we expect the exchange rate to be.
+#' 1.1 means 10% higher than historical trend.
 #' @param tx_c_base base exchange rate
 #' @param exp_camb percent of expostion to foreign currency
 #' @param exp_usd exposition to dollar
 #' @param cambio_real Logical. If TRUE, will use real exchange rate up to 2017, then 3.77 as prediction for the following years.
 #'  If not, will use tx_c_base and replicate.
+#' @param start_year number. Year the series will start.
+#' @param amp_erro number Amplitude of error term. In practice,
+#'  it is the number we will multiply the normal error. If 1 it will generate normal errors.
+#'
 #'
 #' @return amount that could be paid due to variation in exchange rate
 #'
@@ -16,7 +21,9 @@
 #' @export risco_cambio
 
 
-risco_cambio <- function(sens_tx_c, tx_c_base = 3.77, cambio_real=F, exp_camb = .5, exp_usd = 1) {
+risco_cambio <- function(sens_tx_c, tx_c_base = 3.77, cambio_real=F,
+                         exp_camb = .5, exp_usd = 1, start_year, amp_erro,
+                         igual_excel = F) {
 
   valor_ep <- 17021.599
   ep_n <- c(0, valor_ep, rep(0, 31))
@@ -34,7 +41,13 @@ risco_cambio <- function(sens_tx_c, tx_c_base = 3.77, cambio_real=F, exp_camb = 
     tx_c_base <- rep(tx_c_base, 33)
   }
 
-  result <- -(ep_n + amortizacao_fin_lp1 + amortizacao_fin_lp2 + pi_ep + pi_fin_lp1 + pi_fin_lp2)*exp_usd*(tx_c_base - tx_c_base*sens_tx_c)*exp_camb
+  if(igual_excel) {
+    dif_cambio <- tx_c_base - tx_c_base*sens_tx_c
+  } else {
+    dif_cambio <- tx_c_base - gen_cambio_futuro(mu = (sens_tx_c - 1)*0.6605721 )
+  }
+
+  result <- -(ep_n + amortizacao_fin_lp1 + amortizacao_fin_lp2 + pi_ep + pi_fin_lp1 + pi_fin_lp2)*exp_usd*(dif_cambio)*exp_camb
 
   return(result)
 
