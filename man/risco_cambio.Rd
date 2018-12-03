@@ -21,6 +21,8 @@ risco_cambio(sens_tx_c, tx_c_base = 3.77, cambio_real = F,
 \item{start_year}{number. Year the series will start.}
 
 \item{amp_erro}{number Amplitude of error term. In practice, it is the number we will multiply the normal error. If 1 it will generate normal errors.}
+
+\item{igual_excel}{Logical. If TRUE, function will generate same data for base exchange rate as in the excel file}
 }
 \value{
 amount that could be paid due to variation in exchange rate
@@ -29,6 +31,6 @@ amount that could be paid due to variation in exchange rate
 computes total spending for a given sensibility in exhange rate
 }
 \examples{
- risco_cambio(sens_tx_c = 1.1)
+ risco_cambio(sens_tx_c = 1.1, start_year = 2007, amp_erro = 2)
 
 }

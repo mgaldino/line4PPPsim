@@ -34,5 +34,6 @@ gen_cambio_futuro <- function(start_year=2005, amp_erro = 2, mu=0) {
 
   df_sim <- data.frame(cambio = y3,
                        data = (as.Date("1990-01-01") + 1 + round(365.25*k)) + 366*(1:33))
+
   return(df_sim)
 }
