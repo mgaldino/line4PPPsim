@@ -14,5 +14,6 @@
 constant <- function(start_seed, num_years = 33) {
 
   y <- rep(start_seed, num_years)
+  return(y)
 
 }
