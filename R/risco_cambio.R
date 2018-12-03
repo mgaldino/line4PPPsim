@@ -9,11 +9,12 @@
 #' @param cambio_real Logical. If TRUE, will use real exchange rate up to 2017, then 3.77 as prediction for the following years. If not, will use tx_c_base and replicate.
 #' @param start_year number. Year the series will start.
 #' @param amp_erro number Amplitude of error term. In practice, it is the number we will multiply the normal error. If 1 it will generate normal errors.
+#' @param igual_excel Logical. If TRUE, function will generate same data for base exchange rate as in the excel file
 #'
 #'
 #' @return amount that could be paid due to variation in exchange rate
 #'
-#' @examples  risco_cambio(sens_tx_c = 1.1)
+#' @examples  risco_cambio(sens_tx_c = 1.1, start_year = 2007, amp_erro = 2)
 #'
 #' @export risco_cambio
 
@@ -41,7 +42,8 @@ risco_cambio <- function(sens_tx_c, tx_c_base = 3.77, cambio_real=F,
   if(igual_excel) {
     dif_cambio <- tx_c_base - tx_c_base*sens_tx_c
   } else {
-    dif_cambio <- tx_c_base - gen_cambio_futuro(mu = (sens_tx_c - 1)*0.6605721 )
+    aux <- gen_cambio_futuro(mu = (sens_tx_c - 1)*0.6605721 )
+    dif_cambio <- tx_c_base - aux$cambio
   }
 
   result <- -(ep_n + amortizacao_fin_lp1 + amortizacao_fin_lp2 + pi_ep + pi_fin_lp1 + pi_fin_lp2)*exp_usd*(dif_cambio)*exp_camb
