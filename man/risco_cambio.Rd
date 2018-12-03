@@ -8,7 +8,7 @@ risco_cambio(sens_tx_c, tx_c_base = 3.77, cambio_real = F,
   exp_camb = 0.5, exp_usd = 1, start_year, amp_erro, igual_excel = F)
 }
 \arguments{
-\item{sens_tx_c}{A number. How much above or below we expect the exchange rate to be. 1.1 means 10% higher than historical trend.}
+\item{sens_tx_c}{A number. How much above or below we expect the exchange rate to be. 1.1 means 10 percent higher than historical trend.}
 
 \item{tx_c_base}{base exchange rate}
 
