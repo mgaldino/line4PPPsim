@@ -15,7 +15,7 @@
 #'
 #' @return a vector of price tickets o size equal to num_years
 #'
-#' @examples  gen_num_passengers(sensibilidade = 1.3)
+#' @examples  gen_price_ticket_line4(num_years = 33)
 #'
 #' @export gen_price_ticket_line4
 

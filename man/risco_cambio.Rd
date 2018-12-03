@@ -5,10 +5,11 @@
 \title{Risco cambial}
 \usage{
 risco_cambio(sens_tx_c, tx_c_base = 3.77, cambio_real = F,
-  exp_camb = 0.5, exp_usd = 1)
+  exp_camb = 0.5, exp_usd = 1, start_year, amp_erro, igual_excel = F)
 }
 \arguments{
-\item{sens_tx_c}{A number, either 1 or 2 (for type of long term loan)}
+\item{sens_tx_c}{A number. How much above or below we expect the exchange rate to be.
+1.1 means 10% higher than historical trend.}
 
 \item{tx_c_base}{base exchange rate}
 
@@ -18,12 +19,17 @@ If not, will use tx_c_base and replicate.}
 \item{exp_camb}{percent of expostion to foreign currency}
 
 \item{exp_usd}{exposition to dollar}
+
+\item{start_year}{number. Year the series will start.}
+
+\item{amp_erro}{number Amplitude of error term. In practice,
+it is the number we will multiply the normal error. If 1 it will generate normal errors.}
 }
 \value{
 amount that could be paid due to variation in exchange rate
 }
 \description{
-computes totl spending for a given sensitibilit in exhange rate
+computes total spending for a given sensibility in exhange rate
 }
 \examples{
  risco_cambio(sens_tx_c = 1.1)

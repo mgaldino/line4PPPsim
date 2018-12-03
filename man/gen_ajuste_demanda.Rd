@@ -2,7 +2,7 @@
 % Please edit documentation in R/gen_ajuste_demanda.R
 \name{gen_ajuste_demanda}
 \alias{gen_ajuste_demanda}
-\title{Simulates fiscal impact of line 4 subway PPP}
+\title{Simulates demand adjust for line 4 PPP}
 \usage{
 gen_ajuste_demanda(sensibilidade = 1, num_years, t_0 = 2.14, ipc_0,
   ipgm_0, a, b, ipc_realizado = NA, igpm_realizado = NA,
@@ -33,9 +33,10 @@ gen_ajuste_demanda(sensibilidade = 1, num_years, t_0 = 2.14, ipc_0,
 a vector of demand adjustement of size equal to num_years - input to compute implicit rate
 }
 \description{
-This package allows the user to run Monte Carlo simulation to assess the fiscal impact of lline 4 PPP in São Paulo.
+This function allows the user to simulate amount do be paid or received according to dsifference between forecasted and "real"  (simulated) demand.
+By setting the sensibilidade paramter, the user adjust how much the demand will be higher or lower.
 }
 \examples{
- gen_num_passengers(sensibilidade = 1.3)
+ gen_ajuste_demanda(sensibilidade = 1.3)
 
 }

@@ -36,6 +36,6 @@ a vector of price tickets o size equal to num_years
 This package allows the user to run Monte Carlo simulation to assess the fiscal impact of lline 4 PPP in São Paulo.
 }
 \examples{
- gen_num_passengers(sensibilidade = 1.3)
+ gen_price_ticket_line4(num_years = 33)
 
 }
