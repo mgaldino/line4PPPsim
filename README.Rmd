@@ -13,6 +13,7 @@ knitr::opts_chunk$set(
 )
 ```
 # line4PPPsim
+[![Build Status](https://travis-ci.com/mgaldino/line4PPPsim.svg?branch=master)](https://travis-ci.com/mgaldino/line4PPPsim)
 
 This package allows the user to run Monte Carlo simulation on the fiscal impact of subway PPP. This version is focused only on line4 yellow. Future versions will include Rio de Janeiro's VLT.
 
