@@ -6,6 +6,7 @@
 #' @param amp_erro A number. Amplitude of error
 #' @param mu mean of normal error
 #'
+#' @importFrom stats sd
 #'
 #' @return data frame with real yearly exchange rate and a column of date
 #'

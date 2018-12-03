@@ -2,16 +2,13 @@
 #'
 #' @description computes total spending for a given sensibility in exhange rate
 #'
-#' @param sens_tx_c A number. How much above or below we expect the exchange rate to be.
-#' 1.1 means 10% higher than historical trend.
+#' @param sens_tx_c A number. How much above or below we expect the exchange rate to be. 1.1 means 10% higher than historical trend.
 #' @param tx_c_base base exchange rate
 #' @param exp_camb percent of expostion to foreign currency
 #' @param exp_usd exposition to dollar
-#' @param cambio_real Logical. If TRUE, will use real exchange rate up to 2017, then 3.77 as prediction for the following years.
-#'  If not, will use tx_c_base and replicate.
+#' @param cambio_real Logical. If TRUE, will use real exchange rate up to 2017, then 3.77 as prediction for the following years. If not, will use tx_c_base and replicate.
 #' @param start_year number. Year the series will start.
-#' @param amp_erro number Amplitude of error term. In practice,
-#'  it is the number we will multiply the normal error. If 1 it will generate normal errors.
+#' @param amp_erro number Amplitude of error term. In practice, it is the number we will multiply the normal error. If 1 it will generate normal errors.
 #'
 #'
 #' @return amount that could be paid due to variation in exchange rate

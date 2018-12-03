@@ -8,13 +8,11 @@ risco_cambio(sens_tx_c, tx_c_base = 3.77, cambio_real = F,
   exp_camb = 0.5, exp_usd = 1, start_year, amp_erro, igual_excel = F)
 }
 \arguments{
-\item{sens_tx_c}{A number. How much above or below we expect the exchange rate to be.
-1.1 means 10% higher than historical trend.}
+\item{sens_tx_c}{A number. How much above or below we expect the exchange rate to be. 1.1 means 10% higher than historical trend.}
 
 \item{tx_c_base}{base exchange rate}
 
-\item{cambio_real}{Logical. If TRUE, will use real exchange rate up to 2017, then 3.77 as prediction for the following years.
-If not, will use tx_c_base and replicate.}
+\item{cambio_real}{Logical. If TRUE, will use real exchange rate up to 2017, then 3.77 as prediction for the following years. If not, will use tx_c_base and replicate.}
 
 \item{exp_camb}{percent of expostion to foreign currency}
 
@@ -22,8 +20,7 @@ If not, will use tx_c_base and replicate.}
 
 \item{start_year}{number. Year the series will start.}
 
-\item{amp_erro}{number Amplitude of error term. In practice,
-it is the number we will multiply the normal error. If 1 it will generate normal errors.}
+\item{amp_erro}{number Amplitude of error term. In practice, it is the number we will multiply the normal error. If 1 it will generate normal errors.}
 }
 \value{
 amount that could be paid due to variation in exchange rate

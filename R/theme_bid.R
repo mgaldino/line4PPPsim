@@ -7,7 +7,6 @@
 #' @param tam_fonte Set font size used in the plot.
 #' @param fonte Set main font used in the plot.
 #'
-#' @import ggplot2
 #' @export
 
 theme_bid <- function(tam_fonte = 14, fonte = "sans"){
