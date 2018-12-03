@@ -15,7 +15,8 @@ Imports:
   tidyr,
   ggplot2
 Suggests:
-  knitr,
-  devtools
+    knitr,
+    devtools,
+    testthat
 URL: https://github.com/mgaldino/line4PPPsim
 RoxygenNote: 6.1.1
