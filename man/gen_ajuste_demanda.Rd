@@ -6,7 +6,8 @@
 \usage{
 gen_ajuste_demanda(sensibilidade = 1, num_years, t_0 = 2.14, ipc_0,
   ipgm_0, a, b, ipc_realizado = NA, igpm_realizado = NA,
-  ajuste_inflacao = F, use_random_walk, start_value, mu, sd, beta, jump)
+  ajuste_inflacao = FALSE, use_random_walk, start_value, mu, sd, beta,
+  jump)
 }
 \arguments{
 \item{sensibilidade}{A vector}
@@ -49,6 +50,6 @@ This function allows the user to simulate amount do be paid or received accordin
 By setting the sensibilidade paramter, the user adjust how much the demand will be higher or lower. It computes the "MD".
 }
 \examples{
- gen_ajuste_demanda(sensibilidade = 1.3, use_random_walk = F)
+ gen_ajuste_demanda(sensibilidade = 1.3, use_random_walk = FALSE)
 
 }

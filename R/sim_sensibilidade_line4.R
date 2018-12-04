@@ -35,7 +35,6 @@
 #' @export sim_sensibilidade_line4
 
 
-
 sim_sensibilidade_line4 <- function (n_sim, num_years, t_0 = 2.14, ipc_0 = 1.1,
                                      ipgm_0 = 1.1, a=.5, b=.5, ipc_realizado=NA,
                                      igpm_realizado=NA,
@@ -43,7 +42,7 @@ sim_sensibilidade_line4 <- function (n_sim, num_years, t_0 = 2.14, ipc_0 = 1.1,
                                      mu_sense =1, sd_sense = .1,
                                      incidencia = c(0,0,0,.5, rep(1, 9), rep(0, num_years - 13)),
                                      type = "white_noise", start_seed=1,
-                                     use_random_walk=F,
+                                     use_random_walk=FALSE,
                                      start_value=196860,
                                      mu = start_value, sd = .07*start_value,
                                      beta=1, jump=F){
@@ -53,7 +52,7 @@ sim_sensibilidade_line4 <- function (n_sim, num_years, t_0 = 2.14, ipc_0 = 1.1,
          random_walk = random_walk(start_seed, num_years, mu=mu_sense, sd=sd_sense),
          constant = constant(start_seed, num_years))
 
-  previsto  <- gen_forecast_revenue(num_years = 33, ajuste_inflacao = F)
+  previsto  <- gen_forecast_revenue(num_years = 33, ajuste_inflacao = FALSE)
 
   # criando matriz para guardar resultados
   # cada linha e uma simulacao
@@ -70,7 +69,8 @@ sim_sensibilidade_line4 <- function (n_sim, num_years, t_0 = 2.14, ipc_0 = 1.1,
 
     realizado[i,] <- gen_ticket_revenue(sensibilidade = param[i,],
                                         num_years = 33,
-                                        ajuste_inflacao = F,
+                                        use_random_walk,
+                                        ajuste_inflacao = FALSE,
                                         start_value, mu, sd, beta, jump)
 
     dif[i,] <- realizado[i,] - previsto

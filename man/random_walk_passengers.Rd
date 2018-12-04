@@ -10,7 +10,7 @@ random_walk_passengers(start_seed = 196860, num_years = 33, mu = 0,
 \arguments{
 \item{start_seed}{A number. First point of the series.}
 
-\item{num_years}{A number}
+\item{num_years}{A number. Number of years. Usually 33.}
 
 \item{mu}{A number}
 
@@ -27,7 +27,6 @@ a vector of simulated random walk times series of size equal to num_years
 Auxiliar function. It computes a random walk with jumps, that is used to generate forecasted demand.
 }
 \examples{
- random_walk_passengers(start_seed = 196860, num_years=33,
-mu = 0, sd = .7*start_seed, beta=1, jump=T)
+ random_walk_passengers(start_seed=19686)
 
 }

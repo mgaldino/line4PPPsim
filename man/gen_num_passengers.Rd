@@ -4,7 +4,7 @@
 \alias{gen_num_passengers}
 \title{Generates passengers for line 4}
 \usage{
-gen_num_passengers(sensibilidade = 1, use_random_walk = F,
+gen_num_passengers(sensibilidade = 1, use_random_walk = FALSE,
   start_value = 196860, num_years = 33, mu = start_value, sd = 0.07
   * start_value, beta = 1, jump = F)
 }

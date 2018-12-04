@@ -22,7 +22,7 @@
 #'
 #' @return a vector of demand adjustement of size equal to num_years - input to compute implicit rate
 #'
-#' @examples  gen_ajuste_demanda(sensibilidade = 1.3, use_random_walk = F)
+#' @examples  gen_ajuste_demanda(sensibilidade = 1.3, use_random_walk = FALSE)
 #'
 #' @export gen_ajuste_demanda
 
@@ -30,7 +30,7 @@ gen_ajuste_demanda <- function(sensibilidade = 1, num_years,
                                t_0 = 2.14,
                                ipc_0 , ipgm_0 ,
                                a,b, ipc_realizado = NA ,
-                               igpm_realizado = NA, ajuste_inflacao = F,
+                               igpm_realizado = NA, ajuste_inflacao = FALSE,
                                use_random_walk,
                                start_value,
                                mu , sd,

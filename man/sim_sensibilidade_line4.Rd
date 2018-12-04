@@ -9,7 +9,7 @@ sim_sensibilidade_line4(n_sim, num_years, t_0 = 2.14, ipc_0 = 1.1,
   igpm_realizado = NA, qualityAdjustment = 1, ajuste_inflacao,
   mu_sense = 1, sd_sense = 0.1, incidencia = c(0, 0, 0, 0.5, rep(1,
   9), rep(0, num_years - 13)), type = "white_noise", start_seed = 1,
-  use_random_walk = F, start_value = 196860, mu = start_value,
+  use_random_walk = FALSE, start_value = 196860, mu = start_value,
   sd = 0.07 * start_value, beta = 1, jump = F)
 }
 \arguments{

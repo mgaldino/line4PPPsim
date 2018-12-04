@@ -3,7 +3,7 @@
 #' @description Auxiliar function. It computes a random walk with jumps, that is used to generate forecasted demand.
 #'
 #' @param start_seed A number. First point of the series.
-#' @param num_years A number
+#' @param num_years A number. Number of years. Usually 33.
 #' @param mu A number
 #' @param sd A number
 #' @param beta A number. Effect of past step on the next step.
@@ -11,8 +11,7 @@
 #'
 #' @return a vector of simulated random walk times series of size equal to num_years
 #'
-#' @examples  random_walk_passengers(start_seed = 196860, num_years=33,
-#' mu = 0, sd = .7*start_seed, beta=1, jump=T)
+#' @examples  random_walk_passengers(start_seed=19686)
 #'
 #' @export random_walk_passengers
 
