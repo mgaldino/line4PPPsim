@@ -4,8 +4,8 @@
 \alias{random_walk_passengers}
 \title{Simulates a random walk for passengers number}
 \usage{
-random_walk_passengers(start_seed = 196860, num_years = 33,
-  mu = start_seed, sd = 0.7 * start_seed, beta = 1, jump = T)
+random_walk_passengers(start_seed = 196860, num_years = 33, mu = 0,
+  sd = 0.7 * start_seed, beta = 1, jump = T)
 }
 \arguments{
 \item{start_seed}{A number. First point of the series.}
@@ -27,6 +27,6 @@ a vector of simulated random walk times series of size equal to num_years
 Auxiliar function. It computes a random walk with jumps, that is used to generate forecasted demand.
 }
 \examples{
- random_walk_passengers(start_seed = 196860)
+ random_walk_passengers(start_seed = 196860, num_years=33, mu = 0, sd = .7*start_seed, beta=1, jump=T)
 
 }

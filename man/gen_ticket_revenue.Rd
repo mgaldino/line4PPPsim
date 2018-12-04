@@ -7,8 +7,8 @@
 gen_ticket_revenue(num_years = 33, t_0 = 2.14, ipc_0 = 1.1,
   ipgm_0 = 1.1, a = 0.5, b = 0.5, ipc_realizado = NA,
   igpm_realizado = NA, qualityAdjustment = 1, sensibilidade = 1,
-  ajuste_inflacao, use_random_walk = F, start_value = 196860,
-  mu = start_value, sd = 0.07 * start_value, beta = 1, jump = F)
+  ajuste_inflacao, use_random_walk = F, start_value, mu, sd, beta,
+  jump = F)
 }
 \arguments{
 \item{num_years}{A number}

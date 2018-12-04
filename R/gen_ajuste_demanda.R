@@ -13,6 +13,13 @@
 #' @param igpm_realizado A number
 #' @param sensibilidade A vector
 #' @param ajuste_inflacao logical
+#' @param use_random_walk Logical. If TRUE, it will use a random walk to forecast demand (instead of a fixed forecast as in excel)
+#' @param start_value A number. First point of the series. Use only if random_walk = T
+#' @param num_years A number
+#' @param mu A number
+#' @param sd A number
+#' @param beta A number. Effect of past step on the next step.
+#' @param jump logical. If TRUE, in the eight year of the series the forecasted demand increases by 25\% relative to last value (plus error). Equivalent to set beta =1.25 for year 8.
 #'
 #' @return a vector of demand adjustement of size equal to num_years - input to compute implicit rate
 #'
@@ -24,7 +31,11 @@ gen_ajuste_demanda <- function(sensibilidade = 1, num_years,
                                t_0 = 2.14,
                                ipc_0 , ipgm_0 ,
                                a,b, ipc_realizado = NA ,
-                               igpm_realizado = NA, ajuste_inflacao = F) {
+                               igpm_realizado = NA, ajuste_inflacao = F,
+                               use_random_walk,
+                               start_value,
+                               mu , sd,
+                               beta, jump) {
 
   stopifnot(.6 <= sensibilidade && sensibilidade <= 1.4)
 
@@ -32,7 +43,10 @@ gen_ajuste_demanda <- function(sensibilidade = 1, num_years,
                                          ipc_0, ipgm_0,
                                          a, b, ipc_realizado = ipc_realizado,
                                          igpm_realizado = igpm_realizado, ajuste_inflacao)
-  passengers <- gen_num_passengers()
+  passengers <- gen_num_passengers(sensibilidade, use_random_walk,
+                                   start_value, num_years,
+                                   mu , sd,
+                                   beta, jump)
   dp <- passengers[[3]]
   dr <- dp*sensibilidade
   pe <- passengers[[1]]

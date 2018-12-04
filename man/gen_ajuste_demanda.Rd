@@ -6,7 +6,7 @@
 \usage{
 gen_ajuste_demanda(sensibilidade = 1, num_years, t_0 = 2.14, ipc_0,
   ipgm_0, a, b, ipc_realizado = NA, igpm_realizado = NA,
-  ajuste_inflacao = F)
+  ajuste_inflacao = F, use_random_walk, start_value, mu, sd, beta, jump)
 }
 \arguments{
 \item{sensibilidade}{A vector}
@@ -28,6 +28,20 @@ gen_ajuste_demanda(sensibilidade = 1, num_years, t_0 = 2.14, ipc_0,
 \item{igpm_realizado}{A number}
 
 \item{ajuste_inflacao}{logical}
+
+\item{use_random_walk}{Logical. If TRUE, it will use a random walk to forecast demand (instead of a fixed forecast as in excel)}
+
+\item{start_value}{A number. First point of the series. Use only if random_walk = T}
+
+\item{mu}{A number}
+
+\item{sd}{A number}
+
+\item{beta}{A number. Effect of past step on the next step.}
+
+\item{jump}{logical. If TRUE, in the eight year of the series the forecasted demand increases by 25\% relative to last value (plus error). Equivalent to set beta =1.25 for year 8.}
+
+\item{num_years}{A number}
 }
 \value{
 a vector of demand adjustement of size equal to num_years - input to compute implicit rate

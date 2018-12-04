@@ -30,15 +30,15 @@ gen_ticket_revenue <- function(num_years = 33, t_0 = 2.14, ipc_0 = 1.1,
                                ipgm_0 = 1.1, a=.5, b=.5, ipc_realizado=NA, igpm_realizado=NA,
                                qualityAdjustment=1, sensibilidade = 1, ajuste_inflacao,
                                use_random_walk=F,
-                               start_value=196860,
-                               mu = start_value, sd = .07*start_value,
-                               beta=1, jump=F) {
+                               start_value,
+                               mu, sd ,
+                               beta, jump=F) {
 
-  num_pass <- gen_num_passengers(sensibilidade = sensibilidade,
-                                 use_random_walk=F,
-                                 start_value=196860, num_years=33,
-                                 mu = start_value, sd = .07*start_value,
-                                 beta=1, jump=F)
+  num_pass <- gen_num_passengers(sensibilidade,
+                                 use_random_walk,
+                                 start_value, num_years,
+                                 mu , sd ,
+                                 beta, jump)
 
   numPassengersExclusive <- num_pass[[1]]
   numPassengersIntegrated <- num_pass[[2]]
