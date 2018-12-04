@@ -21,26 +21,35 @@
 #' @param incidencia A vector. line 27 of excel.
 #' @param type character. Either "white_noise", or "random_walk" or "constant"
 #' @param start_seed A number
+#' @param start_value A number. First point of the series. Use only if random_walk = T
+#' @param mu A number
+#' @param sd A number
+#' @param beta A number. Effect of past step on the next step.
+#' @param jump logical. If TRUE, in the eight year of the series the forecasted demand increases by 25\% relative to last value (plus error). Equivalent to set beta =1.25 for year 8.
 #'
 #' @return a list with two elements: a data.frame wih simulated difference betwen real demand and forecasted, and a matrizwith sensibilidade parameters generated in the simulation.
 #'
-#' @examples  sim_sensibilidade_line4(3, 33, start_seed = 1, ajuste_inflacao = F)
+#' @examples  sim_sensibilidade_line4(n_sim=3, num_years=33, start_seed = 1, ajuste_inflacao = F)
 #'
 #' @export sim_sensibilidade_line4
 
 
 
-sim_sensibilidade_line4 <- function (n_sim, num_years,t_0 = 2.14, ipc_0 = 1.1,
+sim_sensibilidade_line4 <- function (n_sim, num_years, t_0 = 2.14, ipc_0 = 1.1,
                                      ipgm_0 = 1.1, a=.5, b=.5, ipc_realizado=NA,
                                      igpm_realizado=NA,
                                      qualityAdjustment=1, ajuste_inflacao,
-                                     mu =1, sd = .1,
+                                     mu_sense =1, sd_sense = .1,
                                      incidencia = c(0,0,0,.5, rep(1, 9), rep(0, num_years - 13)),
-                                     type = "white_noise", start_seed){
+                                     type = "white_noise", start_seed,
+                                     use_random_walk=F,
+                                     start_value=196860,
+                                     mu = start_value, sd = .07*start_value,
+                                     beta=1, jump=F){
 
   switch(type,
-         white_noise = white_noise(start_seed, num_years, mu, sd),
-         random_walk = random_walk(start_seed, num_years, mu, sd),
+         white_noise = white_noise(start_seed, num_years, mu=mu_sense, sd=sd_sense),
+         random_walk = random_walk(start_seed, num_years, mu=mu_sense, sd=sd_sense),
          constant = constant(start_seed, num_years))
 
   previsto  <- gen_forecast_revenue(num_years = 33, ajuste_inflacao = F)

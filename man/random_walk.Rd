@@ -4,11 +4,11 @@
 \alias{random_walk}
 \title{Simulates a random walk}
 \usage{
-random_walk(start_seed, num_years = 33, mu = 0, sd = 0.05,
+random_walk(start_value, num_years = 33, mu = 0, sd = 0.05,
   beta = 1)
 }
 \arguments{
-\item{start_seed}{A number. First point of the series.}
+\item{start_value}{A number. First point of the series.}
 
 \item{num_years}{A number}
 
@@ -25,6 +25,6 @@ a vector of simulated random walk times series of size equal to num_years
 Auxiliar function. It computes a random walk, that is used to generate sensibility. In other words, its results are used as themultiplier of real demand. A value os 1.1 means for instance that the demand is 1.1 bigger than projected.
 }
 \examples{
- random_walk(start_seed = 1.3, mu = 0, sd = .05)
+ random_walk(start_value = 1.3, mu = 0, sd = .05)
 
 }

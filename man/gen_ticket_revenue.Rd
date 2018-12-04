@@ -4,10 +4,11 @@
 \alias{gen_ticket_revenue}
 \title{Computes tariff revenut (receita tarifaria)}
 \usage{
-gen_ticket_revenue(num_years = 30, t_0 = 2.14, ipc_0 = 1.1,
+gen_ticket_revenue(num_years = 33, t_0 = 2.14, ipc_0 = 1.1,
   ipgm_0 = 1.1, a = 0.5, b = 0.5, ipc_realizado = NA,
   igpm_realizado = NA, qualityAdjustment = 1, sensibilidade = 1,
-  ajuste_inflacao)
+  ajuste_inflacao, use_random_walk = F, start_value = 196860,
+  mu = start_value, sd = 0.07 * start_value, beta = 1, jump = F)
 }
 \arguments{
 \item{num_years}{A number}
@@ -31,6 +32,18 @@ gen_ticket_revenue(num_years = 30, t_0 = 2.14, ipc_0 = 1.1,
 \item{sensibilidade}{A vector}
 
 \item{ajuste_inflacao}{logical}
+
+\item{use_random_walk}{Logical. If TRUE, it will use a random walk to forecast demand (instead of a fixed forecast as in excel)}
+
+\item{start_value}{A number. First point of the series. Use only if random_walk = T}
+
+\item{mu}{A number}
+
+\item{sd}{A number}
+
+\item{beta}{A number. Effect of past step on the next step.}
+
+\item{jump}{logical. If TRUE, in the eight year of the series the forecasted demand increases by 25\% relative to last value (plus error). Equivalent to set beta =1.25 for year 8.}
 }
 \value{
 a vector of revenue of size equal to num_years - as a result of real demand as set by sensibilidade

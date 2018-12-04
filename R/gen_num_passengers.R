@@ -4,7 +4,7 @@
 #'
 #' @param sensibilidade A vector
 #' @param use_random_walk Logical. If TRUE, it will use a random walk to forecast demand (instead of a fixed forecast as in excel)
-#' @param start_seed A number. First point of the series. Use only if random_walk = T
+#' @param start_value A number. First point of the series. Use only if random_walk = T
 #' @param num_years A number
 #' @param mu A number
 #' @param sd A number
@@ -18,8 +18,8 @@
 #' @export gen_num_passengers
 
 gen_num_passengers <- function (sensibilidade = 1, use_random_walk=F,
-                                start_seed=196860, num_years=33,
-                                mu = start_seed, sd = .07*start_seed,
+                                start_value=196860, num_years=33,
+                                mu = start_value, sd = .07*start_value,
                                 beta=1, jump=F) {
 
   demanda_projetada <- c(0, 0, 0, 196860, 204204, 211822, 214415, 284490,
@@ -34,7 +34,7 @@ gen_num_passengers <- function (sensibilidade = 1, use_random_walk=F,
   perc_pass_integrated_contract <- 1 - perc_pass_exclusive_contract
 
   if(use_random_walk) {
-    demanda_real <- round(random_walk_passengers(start_seed, num_years,
+    demanda_real <- round(random_walk_passengers(start_value, num_years,
                                            mu, sd, beta, jump))
   } else {
     demanda_real <- round(demanda_projetada * sensibilidade)

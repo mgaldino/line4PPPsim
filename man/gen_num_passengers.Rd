@@ -5,15 +5,15 @@
 \title{Generates passengers for line 4}
 \usage{
 gen_num_passengers(sensibilidade = 1, use_random_walk = F,
-  start_seed = 196860, num_years = 33, mu = start_seed, sd = 0.07 *
-  start_seed, beta = 1, jump = F)
+  start_value = 196860, num_years = 33, mu = start_value, sd = 0.07
+  * start_value, beta = 1, jump = F)
 }
 \arguments{
 \item{sensibilidade}{A vector}
 
 \item{use_random_walk}{Logical. If TRUE, it will use a random walk to forecast demand (instead of a fixed forecast as in excel)}
 
-\item{start_seed}{A number. First point of the series. Use only if random_walk = T}
+\item{start_value}{A number. First point of the series. Use only if random_walk = T}
 
 \item{num_years}{A number}
 

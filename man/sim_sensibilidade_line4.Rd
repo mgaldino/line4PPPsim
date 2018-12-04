@@ -7,8 +7,10 @@
 sim_sensibilidade_line4(n_sim, num_years, t_0 = 2.14, ipc_0 = 1.1,
   ipgm_0 = 1.1, a = 0.5, b = 0.5, ipc_realizado = NA,
   igpm_realizado = NA, qualityAdjustment = 1, ajuste_inflacao,
-  mu = 1, sd = 0.1, incidencia = c(0, 0, 0, 0.5, rep(1, 9), rep(0,
-  num_years - 13)), type = "white_noise", start_seed)
+  mu_sense = 1, sd_sense = 0.1, incidencia = c(0, 0, 0, 0.5, rep(1,
+  9), rep(0, num_years - 13)), type = "white_noise", start_seed,
+  use_random_walk = F, start_value = 196860, mu = start_value,
+  sd = 0.07 * start_value, beta = 1, jump = F)
 }
 \arguments{
 \item{n_sim}{A number}
@@ -33,15 +35,25 @@ sim_sensibilidade_line4(n_sim, num_years, t_0 = 2.14, ipc_0 = 1.1,
 
 \item{ajuste_inflacao}{logical}
 
-\item{mu}{A number}
-
-\item{sd}{A number}
-
 \item{incidencia}{A vector. line 27 of excel.}
 
 \item{type}{character. Either "white_noise", or "random_walk" or "constant"}
 
 \item{start_seed}{A number}
+
+\item{start_value}{A number. First point of the series. Use only if random_walk = T}
+
+\item{mu}{A number}
+
+\item{sd}{A number}
+
+\item{beta}{A number. Effect of past step on the next step.}
+
+\item{jump}{logical. If TRUE, in the eight year of the series the forecasted demand increases by 25\% relative to last value (plus error). Equivalent to set beta =1.25 for year 8.}
+
+\item{mu}{A number}
+
+\item{sd}{A number}
 }
 \value{
 a list with two elements: a data.frame wih simulated difference betwen real demand and forecasted, and a matrizwith sensibilidade parameters generated in the simulation.
@@ -50,6 +62,6 @@ a list with two elements: a data.frame wih simulated difference betwen real dema
 It computes: diferença entre compensação (MD) e Pagamento (recebimento) de (para) poder concedente (linha 28 excel). Ou seja, a diferença entre receita prevista em contrato e realizada da simulação.
 }
 \examples{
- sim_sensibilidade_line4(3, 33, start_seed = 1, ajuste_inflacao = F)
+ sim_sensibilidade_line4(n_sim=3, num_years=33, start_seed = 1, ajuste_inflacao = F)
 
 }

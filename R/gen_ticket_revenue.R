@@ -13,6 +13,12 @@
 #' @param igpm_realizado A number
 #' @param sensibilidade A vector
 #' @param ajuste_inflacao logical
+#' @param use_random_walk Logical. If TRUE, it will use a random walk to forecast demand (instead of a fixed forecast as in excel)
+#' @param start_value A number. First point of the series. Use only if random_walk = T
+#' @param mu A number
+#' @param sd A number
+#' @param beta A number. Effect of past step on the next step.
+#' @param jump logical. If TRUE, in the eight year of the series the forecasted demand increases by 25\% relative to last value (plus error). Equivalent to set beta =1.25 for year 8.
 #'
 #' @return a vector of revenue of size equal to num_years - as a result of real demand as set by sensibilidade
 #'
@@ -20,11 +26,19 @@
 #'
 #' @export gen_ticket_revenue
 
-gen_ticket_revenue <- function(num_years = 30, t_0 = 2.14, ipc_0 = 1.1,
+gen_ticket_revenue <- function(num_years = 33, t_0 = 2.14, ipc_0 = 1.1,
                                ipgm_0 = 1.1, a=.5, b=.5, ipc_realizado=NA, igpm_realizado=NA,
-                               qualityAdjustment=1, sensibilidade = 1, ajuste_inflacao) {
+                               qualityAdjustment=1, sensibilidade = 1, ajuste_inflacao,
+                               use_random_walk=F,
+                               start_value=196860,
+                               mu = start_value, sd = .07*start_value,
+                               beta=1, jump=F) {
 
-  num_pass <- gen_num_passengers(sensibilidade = sensibilidade)
+  num_pass <- gen_num_passengers(sensibilidade = sensibilidade,
+                                 use_random_walk=F,
+                                 start_value=196860, num_years=33,
+                                 mu = start_value, sd = .07*start_value,
+                                 beta=1, jump=F)
 
   numPassengersExclusive <- num_pass[[1]]
   numPassengersIntegrated <- num_pass[[2]]
