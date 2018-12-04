@@ -2,7 +2,7 @@
 % Please edit documentation in R/random_walk_passengers.R
 \name{random_walk_passengers}
 \alias{random_walk_passengers}
-\title{Simulates a random walk for gen_num_passengers function}
+\title{Simulates a random walk for passengers number}
 \usage{
 random_walk_passengers(start_seed = 196860, num_years = 33,
   mu = start_seed, sd = 0.7 * start_seed, beta = 1, jump = T)
@@ -18,7 +18,7 @@ random_walk_passengers(start_seed = 196860, num_years = 33,
 
 \item{beta}{A number. Effect of past step on the next step.}
 
-\item{jump}{logica. If TRUE, in the eight year of the series the forecasted demand increases by 25% relative to last value (plus error). Equivalent to set beta =1.25 for year 8.}
+\item{jump}{Logical. If TRUE, in the eight year of the series the forecasted demand increases by 25 percent relative to last value (plus error). Equivalent to set beta =1.25 for year 8.}
 }
 \value{
 a vector of simulated random walk times series of size equal to num_years
@@ -27,6 +27,6 @@ a vector of simulated random walk times series of size equal to num_years
 Auxiliar function. It computes a random walk with jumps, that is used to generate forecasted demand.
 }
 \examples{
- random_walk(start_seed = 196860)
+ random_walk_passengers(start_seed = 196860)
 
 }

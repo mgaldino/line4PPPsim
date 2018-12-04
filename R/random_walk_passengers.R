@@ -1,4 +1,4 @@
-#' @title Simulates a random walk for gen_num_passengers function
+#' @title Simulates a random walk for passengers number
 #'
 #' @description Auxiliar function. It computes a random walk with jumps, that is used to generate forecasted demand.
 #'
@@ -7,11 +7,11 @@
 #' @param mu A number
 #' @param sd A number
 #' @param beta A number. Effect of past step on the next step.
-#' @param jump logica. If TRUE, in the eight year of the series the forecasted demand increases by 25% relative to last value (plus error). Equivalent to set beta =1.25 for year 8.
+#' @param jump Logical. If TRUE, in the eight year of the series the forecasted demand increases by 25 percent relative to last value (plus error). Equivalent to set beta =1.25 for year 8.
 #'
 #' @return a vector of simulated random walk times series of size equal to num_years
 #'
-#' @examples  random_walk(start_seed = 196860)
+#' @examples  random_walk_passengers(start_seed = 196860)
 #'
 #' @export random_walk_passengers
 
