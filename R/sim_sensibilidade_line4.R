@@ -1,6 +1,6 @@
 #' @title Run Monte Carlo simulation for line 4 - sensibilidade parameter
 #'
-#' @description This package allows the user to run Monte Carlo simulation to assess the fiscal impact of lline 4 PPP in São Paulo.
+#' @description It computes: diferença entre compensação (MD) e Pagamento (recebimento) de (para) poder concedente (linha 28 excel). Ou seja, a diferença entre receita prevista em contrato e realizada da simulação.
 #'
 #' @import dplyr
 #' @import tidyr

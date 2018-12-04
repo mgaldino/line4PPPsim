@@ -44,7 +44,7 @@ sim_sensibilidade_line4(n_sim, num_years, t_0 = 2.14, ipc_0 = 1.1,
 a list with two elements: a data.frame wih simulated difference betwen real demand and forecasted, and a matrizwith sensibilidade parameters generated in the simulation.
 }
 \description{
-This package allows the user to run Monte Carlo simulation to assess the fiscal impact of lline 4 PPP in São Paulo.
+It computes: diferença entre compensação (MD) e Pagamento (recebimento) de (para) poder concedente (linha 28 excel). Ou seja, a diferença entre receita prevista em contrato e realizada da simulação.
 }
 \examples{
  sim_sensibilidade_line4(3, 33, start_seed = 1, ajuste_inflacao = F)
