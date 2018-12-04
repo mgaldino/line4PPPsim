@@ -21,6 +21,7 @@
 #' @param incidencia A vector. line 27 of excel.
 #' @param type character. Either "white_noise", or "random_walk" or "constant"
 #' @param start_seed A number
+#' @param use_random_walk Logical. If TRUE, it will use a random walk to forecast demand (instead of a fixed forecast as in excel)
 #' @param start_value A number. First point of the series. Use only if random_walk = T
 #' @param mu A number
 #' @param sd A number

@@ -45,6 +45,8 @@ sim_sensibilidade_line4(n_sim, num_years, t_0 = 2.14, ipc_0 = 1.1,
 
 \item{start_seed}{A number}
 
+\item{use_random_walk}{Logical. If TRUE, it will use a random walk to forecast demand (instead of a fixed forecast as in excel)}
+
 \item{start_value}{A number. First point of the series. Use only if random_walk = T}
 
 \item{mu}{A number}
