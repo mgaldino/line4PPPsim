@@ -18,6 +18,7 @@
 #' @param ajuste_inflacao logical
 #' @param mu A number
 #' @param sd A number
+#' @param incidencia A vector. line 27 of excel.
 #' @param type character. Either "white_noise", or "random_walk" or "constant"
 #' @param start_seed A number
 #'
@@ -34,6 +35,7 @@ sim_sensibilidade_line4 <- function (n_sim, num_years,t_0 = 2.14, ipc_0 = 1.1,
                                      igpm_realizado=NA,
                                      qualityAdjustment=1, ajuste_inflacao,
                                      mu =1, sd = .1,
+                                     incidencia = c(0,0,0,.5, rep(1, 9), rep(0, num_years - 13)),
                                      type = "white_noise", start_seed){
 
   switch(type,
@@ -59,7 +61,10 @@ sim_sensibilidade_line4 <- function (n_sim, num_years,t_0 = 2.14, ipc_0 = 1.1,
     realizado[i,] <- gen_ticket_revenue(sensibilidade = param[i,], num_years = 33, ajuste_inflacao = F)
 
     dif[i,] <- realizado[i,] - previsto
+    dif[i,] <- dif[i,]*incidencia
   }
+  # incidencia. Multiplica por .5 no ano 4.
+
 
   dif1 <- as.data.frame(t(dif))
   names(dif1) <- paste0("sim", 1:n_sim)
