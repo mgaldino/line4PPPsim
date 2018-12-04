@@ -16,7 +16,7 @@
 #' @export random_walk_passengers
 
 random_walk_passengers <- function(start_seed=196860, num_years=33,
-                        mu = start_seed, sd = .7*start_seed, beta=1, jump=T) {
+                        mu = 0, sd = .7*start_seed, beta=1, jump=T) {
 
 
   y <- c(0,0,0)
