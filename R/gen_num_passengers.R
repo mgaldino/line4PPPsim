@@ -8,8 +8,8 @@
 #' @param mu A number
 #' @param sd A number
 #' @param beta A number. Effect of past step on the next step.
-#' @param jump logica. If TRUE, in the eight year of the series the forecasted demand increases by 25% relative to last value (plus error). Equivalent to set beta =1.25 for year 8.
-
+#' @param jump logical. If TRUE, in the eight year of the series the forecasted demand increases by 25% relative to last value (plus error). Equivalent to set beta =1.25 for year 8.
+#' @param random_walk Logical. If TRUE, it will use a random walk to forecast demand (instead of a fixed forecast as in excel)
 #'
 #' @return A list of four elements, all with size 33: numPassengersExclusive, numPassengersIntegrated, demanda_projetada and demanda_real
 #'
@@ -32,7 +32,7 @@ gen_num_passengers <- function (sensibilidade = 1, random_walk=F,
   perc_pass_exclusive_contract <- c(0, 0, 0, rep(.05, 4), rep(.1, 26))
   perc_pass_integrated_contract <- 1 - perc_pass_exclusive_contract
 
-  if(random_walk = T) {
+  if(random_walk == T) {
     demanda_real <- round(random_walk_passengers(start_seed, num_years,
                                            mu, sd, beta, jump))
   } else {

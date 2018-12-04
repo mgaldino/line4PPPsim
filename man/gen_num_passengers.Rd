@@ -4,10 +4,26 @@
 \alias{gen_num_passengers}
 \title{Simulates fiscal impact of line 4 subway PPP}
 \usage{
-gen_num_passengers(sensibilidade = 1)
+gen_num_passengers(sensibilidade = 1, random_walk = F,
+  start_seed = 196860, num_years = 33, mu = start_seed, sd = 0.7 *
+  start_seed, beta = 1, jump = T)
 }
 \arguments{
 \item{sensibilidade}{A vector}
+
+\item{random_walk}{Logical. If TRUE, it will use a random walk to forecast demand (instead of a fixed forecast as in excel)}
+
+\item{start_seed}{A number. First point of the series.}
+
+\item{num_years}{A number}
+
+\item{mu}{A number}
+
+\item{sd}{A number}
+
+\item{beta}{A number. Effect of past step on the next step.}
+
+\item{jump}{logical. If TRUE, in the eight year of the series the forecasted demand increases by 25% relative to last value (plus error). Equivalent to set beta =1.25 for year 8.}
 }
 \value{
 A list of four elements, all with size 33: numPassengersExclusive, numPassengersIntegrated, demanda_projetada and demanda_real
