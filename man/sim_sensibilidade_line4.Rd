@@ -13,45 +13,45 @@ sim_sensibilidade_line4(n_sim, num_years, t_0 = 2.14, ipc_0 = 1.1,
   sd = 0.07 * start_value, beta = 1, jump = F)
 }
 \arguments{
-\item{n_sim}{A number}
+\item{n_sim}{A number. How many simulations to run.}
 
-\item{num_years}{A number}
+\item{num_years}{A number. Number of years. Set to 33 for now.}
 
-\item{t_0}{A number}
+\item{t_0}{A number. Basis for ticket. Set to 2.14 as per business plan. Can set to 2.08, as per contract.}
 
-\item{ipc_0}{A number}
+\item{ipc_0}{A number. Basis for IPC. Useful only if ipc_realizado no NA}
 
-\item{ipgm_0}{A number}
+\item{ipgm_0}{A number. Basis for IGPM. Useful only if igpm_realizado no NA}
 
-\item{a}{A number}
+\item{a}{A number. Parameter for revenue formula.}
 
-\item{b}{A number}
+\item{b}{A number. Parameter for revenue formula.}
 
-\item{ipc_realizado}{A number}
+\item{ipc_realizado}{A number. Set to NA to not use it.}
 
-\item{igpm_realizado}{A number}
+\item{igpm_realizado}{A number. Set to NA to not use it.}
 
-\item{qualityAdjustment}{A number}
+\item{qualityAdjustment}{A number. Parameter for receita tarifária. Set to 1 for now.}
 
-\item{ajuste_inflacao}{logical}
+\item{ajuste_inflacao}{logical.}
 
-\item{mu_sense}{A number}
+\item{mu_sense}{A number. position (mean) for normal errors in time series sensibility parameter. The sensibility parameter governs how much the simulation of revenue will be higher (or lower) than planned. See help for gen_ticket_revenue for more details on the sensibility parameter.}
 
-\item{sd_sense}{A number}
+\item{sd_sense}{A number. location (sd) for normal errors in time series sensibility parameter}
 
 \item{incidencia}{A vector. line 27 of excel.}
 
-\item{type}{character. Either "white_noise", or "random_walk" or "constant"}
+\item{type}{character. Either "white_noise", or "random_walk" or "constant". It specifies which kind of time series will be used to generate the sensibility parameter. It will use mu_sense and sd_sense, if type equals  "white_noise", or "random_walk". Constant replicates what is in excel.}
 
-\item{start_seed}{A number}
+\item{start_seed}{A number. Start point for time series of either white_noise or random_walk.}
 
-\item{use_random_walk}{Logical. If TRUE, it will use a random walk to forecast demand (instead of a fixed forecast as in excel)}
+\item{use_random_walk}{Logical. If TRUE, it will use a random walk to forecast demand (instead of a fixed forecast as in excel). This is NOT related to argument type above.}
 
 \item{start_value}{A number. First point of the series. Use only if random_walk = T}
 
-\item{mu}{A number}
+\item{mu}{A number. Position (mean) used when use_random_walk is TRUE}
 
-\item{sd}{A number}
+\item{sd}{A number. Location (sd) used when use_random_walk is TRUE}
 
 \item{beta}{A number. Effect of past step on the next step.}
 
