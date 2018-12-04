@@ -6,7 +6,7 @@
 #' @param num_years A number
 #' @param mu A number
 #' @param sd A number
-#' @ param beta A number. Effect of past step on the next step.
+#' @param beta A number. Effect of past step on the next step.
 #'
 #' @return a vector of simulated random walk times series of size equal to num_years
 #'

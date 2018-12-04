@@ -30,6 +30,8 @@ random_walk(start_seed = 196860, num_years = 33, mu = start_seed,
 \item{mu}{A number}
 
 \item{sd}{A number}
+
+\item{beta}{A number. Effect of past step on the next step.}
 }
 \value{
 a vector of simulated random walk times series of size equal to num_years
