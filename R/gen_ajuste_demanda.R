@@ -15,7 +15,6 @@
 #' @param ajuste_inflacao logical
 #' @param use_random_walk Logical. If TRUE, it will use a random walk to forecast demand (instead of a fixed forecast as in excel)
 #' @param start_value A number. First point of the series. Use only if random_walk = T
-#' @param num_years A number
 #' @param mu A number
 #' @param sd A number
 #' @param beta A number. Effect of past step on the next step.
@@ -23,7 +22,7 @@
 #'
 #' @return a vector of demand adjustement of size equal to num_years - input to compute implicit rate
 #'
-#' @examples  gen_ajuste_demanda(sensibilidade = 1.3)
+#' @examples  gen_ajuste_demanda(sensibilidade = 1.3, use_random_walk = F)
 #'
 #' @export gen_ajuste_demanda
 

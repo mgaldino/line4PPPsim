@@ -11,7 +11,8 @@
 #'
 #' @return a vector of simulated random walk times series of size equal to num_years
 #'
-#' @examples  random_walk_passengers(start_seed = 196860, num_years=33, mu = 0, sd = .7*start_seed, beta=1, jump=T)
+#' @examples  random_walk_passengers(start_seed = 196860, num_years=33,
+#' mu = 0, sd = .7*start_seed, beta=1, jump=T)
 #'
 #' @export random_walk_passengers
 
