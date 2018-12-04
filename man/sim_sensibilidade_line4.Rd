@@ -7,7 +7,8 @@
 sim_sensibilidade_line4(n_sim, num_years, t_0 = 2.14, ipc_0 = 1.1,
   ipgm_0 = 1.1, a = 0.5, b = 0.5, ipc_realizado = NA,
   igpm_realizado = NA, qualityAdjustment = 1, ajuste_inflacao,
-  mu = 1, sd = 0.1, type = "white_noise", start_seed)
+  mu = 1, sd = 0.1, incidencia = c(0, 0, 0, 0.5, rep(1, 9), rep(0,
+  num_years - 13)), type = "white_noise", start_seed)
 }
 \arguments{
 \item{n_sim}{A number}
@@ -35,6 +36,8 @@ sim_sensibilidade_line4(n_sim, num_years, t_0 = 2.14, ipc_0 = 1.1,
 \item{mu}{A number}
 
 \item{sd}{A number}
+
+\item{incidencia}{A vector. line 27 of excel.}
 
 \item{type}{character. Either "white_noise", or "random_walk" or "constant"}
 
