@@ -43,7 +43,7 @@ sim_sensibilidade_line4 <- function (n_sim, num_years, t_0 = 2.14, ipc_0 = 1.1,
                                      incidencia = c(0,0,0,.5, rep(1, 9), rep(0, num_years - 13)),
                                      type = "white_noise", start_seed=1,
                                      use_random_walk=FALSE,
-                                     start_value=196860,
+                                     start_value = 196860,
                                      mu = start_value, sd = .07*start_value,
                                      beta=1, jump=F){
 
@@ -69,7 +69,7 @@ sim_sensibilidade_line4 <- function (n_sim, num_years, t_0 = 2.14, ipc_0 = 1.1,
 
     realizado[i,] <- gen_ticket_revenue(sensibilidade = param[i,],
                                         num_years = 33,
-                                        use_random_walk,
+                                        use_random_walk = use_random_walk,
                                         ajuste_inflacao = FALSE,
                                         start_value, mu, sd, beta, jump)
 

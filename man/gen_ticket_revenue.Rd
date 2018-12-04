@@ -7,8 +7,8 @@
 gen_ticket_revenue(num_years = 33, t_0 = 2.14, ipc_0 = 1.1,
   ipgm_0 = 1.1, a = 0.5, b = 0.5, ipc_realizado = NA,
   igpm_realizado = NA, qualityAdjustment = 1, sensibilidade = 1,
-  ajuste_inflacao, use_random_walk = F, start_value, mu, sd, beta,
-  jump = F)
+  ajuste_inflacao, use_random_walk = FALSE, start_value, mu, sd, beta,
+  jump = FALSE)
 }
 \arguments{
 \item{num_years}{A number}
@@ -52,6 +52,6 @@ a vector of revenue of size equal to num_years - as a result of real demand as s
 Computes total revenue from tariffs. The formula is: Tariff revenue = ((Exclusive passengers x Implicit Tariff) + .5xIntegrated passengers x Implicit tariff)) x (.8 + .1xlqs + .1xlqm). lqs and lqm are set to 1 in this version.
 }
 \examples{
- gen_num_passengers(sensibilidade = 1.3)
+ gen_ticket_revenue(sensibilidade = 1.3, ajuste_inflacao = FALSE)
 
 }

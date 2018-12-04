@@ -56,6 +56,9 @@ a vector of demand adjustement of size equal to num_years - input to compute imp
 This package allows the user to run Monte Carlo simulation to assess the fiscal impact of lline 4 PPP in São Paulo.
 }
 \examples{
- gen_num_passengers(sensibilidade = 1.3)
+ gen_implicit_ticket_revenue(sensibilidade = 1.3, num_years=33,
+ numPassengersExclusive = 2,numPassengersIntegrated=1,
+  price_ticket = 2,
+  use_random_walk=FALSE )
 
 }

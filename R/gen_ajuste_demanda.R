@@ -28,11 +28,11 @@
 
 gen_ajuste_demanda <- function(sensibilidade = 1, num_years,
                                t_0 = 2.14,
-                               ipc_0 , ipgm_0 ,
-                               a,b, ipc_realizado = NA ,
+                               ipc_0 , ipgm_0,
+                               a, b, ipc_realizado = NA ,
                                igpm_realizado = NA, ajuste_inflacao = FALSE,
-                               use_random_walk,
-                               start_value,
+                               use_random_walk = FALSE,
+                               start_value=NA,
                                mu , sd,
                                beta, jump) {
 
@@ -42,7 +42,8 @@ gen_ajuste_demanda <- function(sensibilidade = 1, num_years,
                                          ipc_0, ipgm_0,
                                          a, b, ipc_realizado = ipc_realizado,
                                          igpm_realizado = igpm_realizado, ajuste_inflacao)
-  passengers <- gen_num_passengers(sensibilidade, use_random_walk,
+
+   passengers <- gen_num_passengers(sensibilidade, use_random_walk,
                                    start_value, num_years,
                                    mu , sd,
                                    beta, jump)

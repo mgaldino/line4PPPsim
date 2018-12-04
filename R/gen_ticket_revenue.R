@@ -22,17 +22,17 @@
 #'
 #' @return a vector of revenue of size equal to num_years - as a result of real demand as set by sensibilidade
 #'
-#' @examples  gen_num_passengers(sensibilidade = 1.3)
+#' @examples  gen_ticket_revenue(sensibilidade = 1.3, ajuste_inflacao = FALSE)
 #'
 #' @export gen_ticket_revenue
 
 gen_ticket_revenue <- function(num_years = 33, t_0 = 2.14, ipc_0 = 1.1,
                                ipgm_0 = 1.1, a=.5, b=.5, ipc_realizado=NA, igpm_realizado=NA,
                                qualityAdjustment=1, sensibilidade = 1, ajuste_inflacao,
-                               use_random_walk=F,
+                               use_random_walk=FALSE,
                                start_value,
                                mu, sd ,
-                               beta, jump=F) {
+                               beta, jump=FALSE) {
 
   num_pass <- gen_num_passengers(sensibilidade,
                                  use_random_walk,
@@ -53,7 +53,7 @@ gen_ticket_revenue <- function(num_years = 33, t_0 = 2.14, ipc_0 = 1.1,
 
   implicit_ticket_rev <- gen_implicit_ticket_revenue(numPassengersExclusive = numPassengersExclusive,
                                                      numPassengersIntegrated = numPassengersIntegrated,
-                                                     price_ticket = price_ticket,
+                                                     price_ticket = price_ticket, use_random_walk = FALSE,
                                                      num_years = num_years, t_0 = t_0,
                                                      ipc_0 = ipc_0, ipgm_0 = ipgm_0,
                                                      a =a,b= b, ipc_realizado = ipc_realizado,

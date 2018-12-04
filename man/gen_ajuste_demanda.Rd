@@ -6,8 +6,8 @@
 \usage{
 gen_ajuste_demanda(sensibilidade = 1, num_years, t_0 = 2.14, ipc_0,
   ipgm_0, a, b, ipc_realizado = NA, igpm_realizado = NA,
-  ajuste_inflacao = FALSE, use_random_walk, start_value, mu, sd, beta,
-  jump)
+  ajuste_inflacao = FALSE, use_random_walk = FALSE, start_value = NA,
+  mu, sd, beta, jump)
 }
 \arguments{
 \item{sensibilidade}{A vector}

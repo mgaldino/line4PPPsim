@@ -24,7 +24,10 @@
 #'
 #' @return a vector of demand adjustement of size equal to num_years - input to compute implicit rate
 #'
-#' @examples  gen_num_passengers(sensibilidade = 1.3)
+#' @examples  gen_implicit_ticket_revenue(sensibilidade = 1.3, num_years=33,
+#'  numPassengersExclusive = 2,numPassengersIntegrated=1,
+#'   price_ticket = 2,
+#'   use_random_walk=FALSE )
 #'
 #' @export gen_implicit_ticket_revenue
 
@@ -32,8 +35,8 @@ gen_implicit_ticket_revenue <- function (numPassengersExclusive,
                                          numPassengersIntegrated, price_ticket,
                                          num_years, t_0 = 2.14, ipc_0 = 1.1,
                                          ipgm_0 = 1.1, a=.5, b=.5, ipc_realizado=NA,
-                                         igpm_realizado=NA, sensibilidade, ajuste_inflacao,
-                                         use_random_walk,
+                                         igpm_realizado = NA, sensibilidade, ajuste_inflacao,
+                                         use_random_walk ,
                                          start_value,
                                          mu , sd,
                                          beta, jump) {
@@ -56,11 +59,11 @@ gen_implicit_ticket_revenue <- function (numPassengersExclusive,
     }
   }
 
-  md <- gen_ajuste_demanda(sensibilidade, num_years, t_0 = t_0,
-                           ipc_0 = ipc_0, ipgm_0 = ipgm_0,
-                           a= a,b = b, ipc_realizado = ipc_realizado,
-                           igpm_realizado = igpm_realizado,
-                           use_random_walk,
+  md <- gen_ajuste_demanda(sensibilidade, num_years, t_0,
+                           ipc_0, ipgm_0,
+                           a,b, ipc_realizado,
+                           igpm_realizado,
+                           use_random_walk=FALSE,
                            start_value,
                            mu , sd,
                            beta, jump)
