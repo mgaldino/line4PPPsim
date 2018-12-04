@@ -1,6 +1,6 @@
 #' @title Simulates a random walk
 #'
-#' @description Auxiliar function. It computes a wanrdom walk, that is used to generate sensibility. In other words, its results are used as themultiplier of real demand. A value os 1.1 means for instance that the demand is 1.1 bigger than projected.
+#' @description Auxiliar function. It computes a random walk, that is used to generate sensibility. In other words, its results are used as themultiplier of real demand. A value os 1.1 means for instance that the demand is 1.1 bigger than projected.
 #'
 #' @param start_seed A number. First point of the series.
 #' @param num_years A number
