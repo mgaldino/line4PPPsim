@@ -28,8 +28,8 @@ gen_ticket_revenue <- function(num_years = 30, t_0 = 2.14, ipc_0 = 1.1,
 
   numPassengersExclusive <- num_pass[[1]]
   numPassengersIntegrated <- num_pass[[2]]
-  demanda_projetada <- num_pass[[3]]
-  demanda_real <- num_pass[[4]]
+  # demanda_projetada <- num_pass[[3]]
+  # demanda_real <- num_pass[[4]]
 
   price_ticket <- gen_price_ticket_line4(num_years = num_years, t_0 = t_0,
                                          ipc_0 = ipc_0, ipgm_0 = ipgm_0,
