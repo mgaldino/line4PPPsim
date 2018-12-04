@@ -10,6 +10,24 @@ gen_ticket_revenue(num_years = 30, t_0 = 2.14, ipc_0 = 1.1,
   ajuste_inflacao)
 }
 \arguments{
+\item{num_years}{A number}
+
+\item{t_0}{A number}
+
+\item{ipc_0}{A number}
+
+\item{ipgm_0}{A number}
+
+\item{a}{A number}
+
+\item{b}{A number}
+
+\item{ipc_realizado}{A number}
+
+\item{igpm_realizado}{A number}
+
+\item{qualityAdjustment}{A number}
+
 \item{sensibilidade}{A vector}
 
 \item{ajuste_inflacao}{logical}

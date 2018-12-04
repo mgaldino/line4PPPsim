@@ -1,6 +1,16 @@
 #' @title Computes tariff revenut (receita tarifaria)
 #'
 #' @description Computes total revenue from tariffs. The formula is: Tariff revenue = ((Exclusive passengers x Implicit Tariff) + .5xIntegrated passengers x Implicit tariff)) x (.8 + .1xlqs + .1xlqm). lqs and lqm are set to 1 in this version.
+#'
+#' @param qualityAdjustment A number
+#' @param num_years A number
+#' @param t_0 A number
+#' @param ipc_0 A number
+#' @param ipgm_0 A number
+#' @param a A number
+#' @param b A number
+#' @param ipc_realizado A number
+#' @param igpm_realizado A number
 #' @param sensibilidade A vector
 #' @param ajuste_inflacao logical
 #'
