@@ -1,7 +1,7 @@
 #' @title Simulates demand adjust for line 4 PPP
 #'
 #' @description This function allows the user to simulate amount do be paid or received according to dsifference between forecasted and "real"  (simulated) demand.
-#' By setting the sensibilidade paramter, the user adjust how much the demand will be higher or lower.
+#' By setting the sensibilidade paramter, the user adjust how much the demand will be higher or lower. It computes the "MD".
 #'
 #' @param num_years A number
 #' @param t_0 A number

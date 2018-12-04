@@ -34,7 +34,7 @@ a vector of demand adjustement of size equal to num_years - input to compute imp
 }
 \description{
 This function allows the user to simulate amount do be paid or received according to dsifference between forecasted and "real"  (simulated) demand.
-By setting the sensibilidade paramter, the user adjust how much the demand will be higher or lower.
+By setting the sensibilidade paramter, the user adjust how much the demand will be higher or lower. It computes the "MD".
 }
 \examples{
  gen_ajuste_demanda(sensibilidade = 1.3)

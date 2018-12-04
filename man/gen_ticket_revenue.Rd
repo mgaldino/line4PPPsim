@@ -2,7 +2,7 @@
 % Please edit documentation in R/gen_ticket_revenue.R
 \name{gen_ticket_revenue}
 \alias{gen_ticket_revenue}
-\title{Simulates fiscal impact of line 4 subway PPP}
+\title{Computes tariff revenut (receita tarifaria)}
 \usage{
 gen_ticket_revenue(num_years = 30, t_0 = 2.14, ipc_0 = 1.1,
   ipgm_0 = 1.1, a = 0.5, b = 0.5, ipc_realizado = NA,
@@ -10,24 +10,6 @@ gen_ticket_revenue(num_years = 30, t_0 = 2.14, ipc_0 = 1.1,
   ajuste_inflacao)
 }
 \arguments{
-\item{num_years}{A number}
-
-\item{t_0}{A number}
-
-\item{ipc_0}{A number}
-
-\item{ipgm_0}{A number}
-
-\item{a}{A number}
-
-\item{b}{A number}
-
-\item{ipc_realizado}{A number}
-
-\item{igpm_realizado}{A number}
-
-\item{qualityAdjustment}{A number}
-
 \item{sensibilidade}{A vector}
 
 \item{ajuste_inflacao}{logical}
@@ -36,7 +18,7 @@ gen_ticket_revenue(num_years = 30, t_0 = 2.14, ipc_0 = 1.1,
 a vector of revenue of size equal to num_years - as a result of real demand as set by sensibilidade
 }
 \description{
-This package allows the user to run Monte Carlo simulation to assess the fiscal impact of lline 4 PPP in São Paulo.
+Computes total revenue from tariffs. The formula is: Tariff revenue = ((Exclusive passengers x Implicit Tariff) + .5xIntegrated passengers x Implicit tariff)) x (.8 + .1xlqs + .1xlqm). lqs and lqm are set to 1 in this version.
 }
 \examples{
  gen_num_passengers(sensibilidade = 1.3)

@@ -42,7 +42,10 @@ resultado <- sim_sensibilidade_line4(n_sim = 100, num_years = 33, start_seed = 1
 
 result_sim <- resultado[[1]]
 
-result_sim %>% ggplot(aes(x=ano, y=diferenca, group = sim)) + geom_line() + ylab("diferença entre realizado e previsto") + scale_y_continuous(labels = scales::comma_format(prefix = "R$ ",big.mark = ".", decimal.mark = ","))
+result_sim %>% ggplot(aes(x=ano, y=diferenca, group = sim)) + 
+  geom_line() + ylab("diferença entre realizado e previsto") +
+  scale_y_continuous(labels = scales::comma_format(prefix = "R$ ",big.mark = ".", decimal.mark = ",")) +
+  theme_bid()
 ```
 
 <img src="man/figures/README-example-1.png" width="100%" />
