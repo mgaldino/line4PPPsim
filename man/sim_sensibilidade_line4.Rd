@@ -35,6 +35,10 @@ sim_sensibilidade_line4(n_sim, num_years, t_0 = 2.14, ipc_0 = 1.1,
 
 \item{ajuste_inflacao}{logical}
 
+\item{mu_sense}{A number}
+
+\item{sd_sense}{A number}
+
 \item{incidencia}{A vector. line 27 of excel.}
 
 \item{type}{character. Either "white_noise", or "random_walk" or "constant"}
@@ -50,10 +54,6 @@ sim_sensibilidade_line4(n_sim, num_years, t_0 = 2.14, ipc_0 = 1.1,
 \item{beta}{A number. Effect of past step on the next step.}
 
 \item{jump}{logical. If TRUE, in the eight year of the series the forecasted demand increases by 25\% relative to last value (plus error). Equivalent to set beta =1.25 for year 8.}
-
-\item{mu}{A number}
-
-\item{sd}{A number}
 }
 \value{
 a list with two elements: a data.frame wih simulated difference betwen real demand and forecasted, and a matrizwith sensibilidade parameters generated in the simulation.

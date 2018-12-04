@@ -16,8 +16,8 @@
 #' @param ipc_realizado A number
 #' @param igpm_realizado A number
 #' @param ajuste_inflacao logical
-#' @param mu A number
-#' @param sd A number
+#' @param mu_sense A number
+#' @param sd_sense A number
 #' @param incidencia A vector. line 27 of excel.
 #' @param type character. Either "white_noise", or "random_walk" or "constant"
 #' @param start_seed A number
