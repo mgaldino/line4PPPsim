@@ -63,8 +63,6 @@ sim_sensibilidade_line4 <- function (n_sim, num_years,t_0 = 2.14, ipc_0 = 1.1,
     dif[i,] <- realizado[i,] - previsto
     dif[i,] <- dif[i,]*incidencia
   }
-  # incidencia. Multiplica por .5 no ano 4.
-
 
   dif1 <- as.data.frame(t(dif))
   names(dif1) <- paste0("sim", 1:n_sim)
