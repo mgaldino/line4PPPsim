@@ -6,8 +6,7 @@
 \usage{
 gen_ajuste_demanda(sensibilidade = 1, num_years, t_0 = 2.14, ipc_0,
   ipgm_0, a, b, ipc_realizado = NA, igpm_realizado = NA,
-  ajuste_inflacao = FALSE, use_random_walk = FALSE, start_value = NA,
-  mu, sd, beta, jump)
+  ajuste_inflacao = FALSE)
 }
 \arguments{
 \item{sensibilidade}{A vector}
@@ -29,18 +28,6 @@ gen_ajuste_demanda(sensibilidade = 1, num_years, t_0 = 2.14, ipc_0,
 \item{igpm_realizado}{A number}
 
 \item{ajuste_inflacao}{logical}
-
-\item{use_random_walk}{Logical. If TRUE, it will use a random walk to forecast demand (instead of a fixed forecast as in excel)}
-
-\item{start_value}{A number. First point of the series. Use only if random_walk = T}
-
-\item{mu}{A number}
-
-\item{sd}{A number}
-
-\item{beta}{A number. Effect of past step on the next step.}
-
-\item{jump}{logical. If TRUE, in the eight year of the series the forecasted demand increases by 25\% relative to last value (plus error). Equivalent to set beta =1.25 for year 8.}
 }
 \value{
 a vector of demand adjustement of size equal to num_years - input to compute implicit rate
@@ -50,6 +37,6 @@ This function allows the user to simulate amount do be paid or received accordin
 By setting the sensibilidade paramter, the user adjust how much the demand will be higher or lower. It computes the "MD".
 }
 \examples{
- gen_ajuste_demanda(sensibilidade = 1.3, use_random_walk = FALSE)
+ gen_ajuste_demanda(sensibilidade = 1.3, num_years=33)
 
 }

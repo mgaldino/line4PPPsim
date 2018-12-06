@@ -24,7 +24,7 @@ gen_forecast_revenue <- function(num_years = 30, t_0 = 2.14, ipc_0 = 1.1,
                                  ipgm_0 = 1.1, a=.5, b=.5, ipc_realizado=NA, igpm_realizado=NA,
                                  qualityAdjustment=1, ajuste_inflacao = FALSE, sensibilidade = 1.3) {
 
-  num_pass <- gen_num_passengers(sensibilidade = 1, use_random_walk = FALSE)
+  num_pass <- gen_num_passengers(sensibilidade = 1, num_years)
 
   numPassengersExclusive <- num_pass[[1]]
   numPassengersIntegrated <- num_pass[[2]]

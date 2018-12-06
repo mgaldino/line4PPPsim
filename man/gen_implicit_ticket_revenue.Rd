@@ -8,7 +8,7 @@ gen_implicit_ticket_revenue(numPassengersExclusive,
   numPassengersIntegrated, price_ticket, num_years, t_0 = 2.14,
   ipc_0 = 1.1, ipgm_0 = 1.1, a = 0.5, b = 0.5,
   ipc_realizado = NA, igpm_realizado = NA, sensibilidade,
-  ajuste_inflacao, use_random_walk, start_value, mu, sd, beta, jump)
+  ajuste_inflacao)
 }
 \arguments{
 \item{numPassengersExclusive}{A vector}
@@ -36,18 +36,6 @@ gen_implicit_ticket_revenue(numPassengersExclusive,
 \item{sensibilidade}{A vector}
 
 \item{ajuste_inflacao}{logical}
-
-\item{use_random_walk}{Logical. If TRUE, it will use a random walk to forecast demand (instead of a fixed forecast as in excel)}
-
-\item{start_value}{A number. First point of the series. Use only if random_walk = T}
-
-\item{mu}{A number}
-
-\item{sd}{A number}
-
-\item{beta}{A number. Effect of past step on the next step.}
-
-\item{jump}{logical. If TRUE, in the eight year of the series the forecasted demand increases by 25\% relative to last value (plus error). Equivalent to set beta =1.25 for year 8.}
 }
 \value{
 a vector of demand adjustement of size equal to num_years - input to compute implicit rate
@@ -58,7 +46,6 @@ This package allows the user to run Monte Carlo simulation to assess the fiscal 
 \examples{
  gen_implicit_ticket_revenue(sensibilidade = 1.3, num_years=33,
  numPassengersExclusive = 2,numPassengersIntegrated=1,
-  price_ticket = 2,
-  use_random_walk=FALSE )
+  price_ticket = 2)
 
 }

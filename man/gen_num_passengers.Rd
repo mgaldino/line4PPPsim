@@ -4,26 +4,12 @@
 \alias{gen_num_passengers}
 \title{Generates passengers for line 4}
 \usage{
-gen_num_passengers(sensibilidade = 1, use_random_walk = FALSE,
-  start_value = 196860, num_years = 33, mu = start_value, sd = 0.07
-  * start_value, beta = 1, jump = F)
+gen_num_passengers(sensibilidade = 1, num_years = 33)
 }
 \arguments{
 \item{sensibilidade}{A vector}
 
-\item{use_random_walk}{Logical. If TRUE, it will use a random walk to forecast demand (instead of a fixed forecast as in excel)}
-
-\item{start_value}{A number. First point of the series. Use only if random_walk = T}
-
 \item{num_years}{A number}
-
-\item{mu}{A number}
-
-\item{sd}{A number}
-
-\item{beta}{A number. Effect of past step on the next step.}
-
-\item{jump}{logical. If TRUE, in the eight year of the series the forecasted demand increases by 25\% relative to last value (plus error). Equivalent to set beta =1.25 for year 8.}
 }
 \value{
 A list of four elements, all with size 33: numPassengersExclusive, numPassengersIntegrated, demanda_projetada and demanda_real

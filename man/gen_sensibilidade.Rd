@@ -4,17 +4,17 @@
 \alias{gen_sensibilidade}
 \title{Simulates a vector of sensibilidade parameter}
 \usage{
-gen_sensibilidade(start_seed, num_years = 33, mu = 0, sd = 0.05,
-  type = "random_walk")
+gen_sensibilidade(start_seed, num_years = 33, mu_sense = 0,
+  sd_sense = 0.05, type = "random_walk")
 }
 \arguments{
 \item{start_seed}{A number}
 
 \item{num_years}{A number}
 
-\item{mu}{A number}
+\item{mu_sense}{A number}
 
-\item{sd}{A number}
+\item{sd_sense}{A number}
 
 \item{type}{A character. Either "random_walk", "white_noise" or "constant"}
 }

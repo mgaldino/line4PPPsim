@@ -15,19 +15,12 @@
 #' @param igpm_realizado A number
 #' @param sensibilidade A vector
 #' @param ajuste_inflacao logical
-#' @param use_random_walk Logical. If TRUE, it will use a random walk to forecast demand (instead of a fixed forecast as in excel)
-#' @param start_value A number. First point of the series. Use only if random_walk = T
-#' @param mu A number
-#' @param sd A number
-#' @param beta A number. Effect of past step on the next step.
-#' @param jump logical. If TRUE, in the eight year of the series the forecasted demand increases by 25\% relative to last value (plus error). Equivalent to set beta =1.25 for year 8.
 #'
 #' @return a vector of demand adjustement of size equal to num_years - input to compute implicit rate
 #'
 #' @examples  gen_implicit_ticket_revenue(sensibilidade = 1.3, num_years=33,
 #'  numPassengersExclusive = 2,numPassengersIntegrated=1,
-#'   price_ticket = 2,
-#'   use_random_walk=FALSE )
+#'   price_ticket = 2)
 #'
 #' @export gen_implicit_ticket_revenue
 
@@ -35,11 +28,7 @@ gen_implicit_ticket_revenue <- function (numPassengersExclusive,
                                          numPassengersIntegrated, price_ticket,
                                          num_years, t_0 = 2.14, ipc_0 = 1.1,
                                          ipgm_0 = 1.1, a=.5, b=.5, ipc_realizado=NA,
-                                         igpm_realizado = NA, sensibilidade, ajuste_inflacao,
-                                         use_random_walk ,
-                                         start_value,
-                                         mu , sd,
-                                         beta, jump) {
+                                         igpm_realizado = NA, sensibilidade, ajuste_inflacao) {
 
   ano <- 1:num_years
   incid_period <- numeric()
@@ -62,11 +51,7 @@ gen_implicit_ticket_revenue <- function (numPassengersExclusive,
   md <- gen_ajuste_demanda(sensibilidade, num_years, t_0,
                            ipc_0, ipgm_0,
                            a,b, ipc_realizado,
-                           igpm_realizado,
-                           use_random_walk=FALSE,
-                           start_value,
-                           mu , sd,
-                           beta, jump)
+                           igpm_realizado)
 
   ti <- (md*incid_period + numPassengersExclusive*price_ticket  +   price_ticket*numPassengersIntegrated*.5)/(numPassengersExclusive + numPassengersIntegrated*.5 )
   ti <- ifelse(is.nan(ti), 2.08, ti)
